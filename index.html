@@ -1,0 +1,2605 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <style type="text/css">
+    .turbo-progress-bar {
+      position: fixed;
+      display: block;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: #0076ff;
+      z-index: 2147483647;
+      transition:
+        width 300ms ease-out,
+        opacity 150ms 150ms ease-in;
+      transform: translate3d(0, 0, 0);
+    }
+  </style>
+  <style data-rc-order="prependQueue" data-css-hash="1g5yja5" data-token-hash="vx5xn4">
+    .glarity---icon-- {
+      display: inline-flex;
+      align-items: center;
+      color: inherit;
+      font-style: normal;
+      line-height: 0;
+      text-align: center;
+      text-transform: none;
+      vertical-align: -0.125em;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .glarity---icon-->* {
+      line-height: 1;
+    }
+
+    .glarity---icon-- svg {
+      display: inline-block;
+    }
+
+    .glarity---icon-- .glarity---icon-- .glarity---icon---icon {
+      display: block;
+    }
+  </style>
+  <style data-rc-order="prependQueue" data-css-hash="1p1tu81" data-token-hash="1boblnk">
+    :where(.css-rrec9u) a {
+      color: #1677ff;
+      text-decoration: none;
+      background-color: transparent;
+      outline: none;
+      cursor: pointer;
+      transition: color 0.3s;
+      -webkit-text-decoration-skip: objects;
+    }
+
+    :where(.css-rrec9u) a:hover {
+      color: #69b1ff;
+    }
+
+    :where(.css-rrec9u) a:active {
+      color: #0958d9;
+    }
+
+    :where(.css-rrec9u) a:active,
+    :where(.css-rrec9u) a:hover {
+      text-decoration: none;
+      outline: 0;
+    }
+
+    :where(.css-rrec9u) a:focus {
+      text-decoration: none;
+      outline: 0;
+    }
+
+    :where(.css-rrec9u) a[disabled] {
+      color: rgba(0, 0, 0, 0.25);
+      cursor: not-allowed;
+    }
+  </style>
+  <style data-rc-order="prependQueue" data-css-hash="oryzs1" data-token-hash="1boblnk">
+    :where(.css-rrec9u)[class^="glarity---popover"],
+    :where(.css-rrec9u)[class*=" glarity---popover"] {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+      font-size: 12px;
+      box-sizing: border-box;
+    }
+
+    :where(.css-rrec9u)[class^="glarity---popover"]::before,
+    :where(.css-rrec9u)[class*=" glarity---popover"]::before,
+    :where(.css-rrec9u)[class^="glarity---popover"]::after,
+    :where(.css-rrec9u)[class*=" glarity---popover"]::after {
+      box-sizing: border-box;
+    }
+
+    :where(.css-rrec9u)[class^="glarity---popover"] [class^="glarity---popover"],
+    :where(.css-rrec9u)[class*=" glarity---popover"] [class^="glarity---popover"],
+    :where(.css-rrec9u)[class^="glarity---popover"] [class*=" glarity---popover"],
+    :where(.css-rrec9u)[class*=" glarity---popover"] [class*=" glarity---popover"] {
+      box-sizing: border-box;
+    }
+
+    :where(.css-rrec9u)[class^="glarity---popover"] [class^="glarity---popover"]::before,
+    :where(.css-rrec9u)[class*=" glarity---popover"] [class^="glarity---popover"]::before,
+    :where(.css-rrec9u)[class^="glarity---popover"] [class*=" glarity---popover"]::before,
+    :where(.css-rrec9u)[class*=" glarity---popover"] [class*=" glarity---popover"]::before,
+    :where(.css-rrec9u)[class^="glarity---popover"] [class^="glarity---popover"]::after,
+    :where(.css-rrec9u)[class*=" glarity---popover"] [class^="glarity---popover"]::after,
+    :where(.css-rrec9u)[class^="glarity---popover"] [class*=" glarity---popover"]::after,
+    :where(.css-rrec9u)[class*=" glarity---popover"] [class*=" glarity---popover"]::after {
+      box-sizing: border-box;
+    }
+
+    :where(.css-rrec9u).glarity---popover {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      color: rgba(0, 0, 0, 0.88);
+      font-size: 12px;
+      line-height: 1.6666666666666667;
+      list-style: none;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1030;
+      font-weight: normal;
+      white-space: normal;
+      text-align: start;
+      cursor: auto;
+      user-select: text;
+      transform-origin: var(--arrow-x, 50%) var(--arrow-y, 50%);
+      --antd-arrow-background-color: #ffffff;
+    }
+
+    :where(.css-rrec9u).glarity---popover-rtl {
+      direction: rtl;
+    }
+
+    :where(.css-rrec9u).glarity---popover-hidden {
+      display: none;
+    }
+
+    :where(.css-rrec9u).glarity---popover .glarity---popover-content {
+      position: relative;
+    }
+
+    :where(.css-rrec9u).glarity---popover .glarity---popover-inner {
+      background-color: #ffffff;
+      background-clip: padding-box;
+      border-radius: 8px;
+      box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+      padding: 12px;
+    }
+
+    :where(.css-rrec9u).glarity---popover .glarity---popover-title {
+      min-width: 177px;
+      margin-bottom: 4px;
+      color: rgba(0, 0, 0, 0.88);
+      font-weight: 600;
+    }
+
+    :where(.css-rrec9u).glarity---popover .glarity---popover-inner-content {
+      color: rgba(0, 0, 0, 0.88);
+    }
+
+    :where(.css-rrec9u).glarity---popover .glarity---popover-arrow {
+      position: absolute;
+      z-index: 1;
+      display: block;
+      pointer-events: none;
+      width: 16px;
+      height: 16px;
+      overflow: hidden;
+    }
+
+    :where(.css-rrec9u).glarity---popover .glarity---popover-arrow::before {
+      position: absolute;
+      bottom: 0;
+      inset-inline-start: 0;
+      width: 16px;
+      height: 8px;
+      background: var(--antd-arrow-background-color);
+      clip-path: polygon(1.6568542494923806px 100%, 50% 1.6568542494923806px, 14.34314575050762px 100%, 1.6568542494923806px 100%);
+      clip-path: path('M 0 8 A 4 4 0 0 0 2.82842712474619 6.82842712474619 L 6.585786437626905 3.0710678118654755 A 2 2 0 0 1 9.414213562373096 3.0710678118654755 L 13.17157287525381 6.82842712474619 A 4 4 0 0 0 16 8 Z');
+      content: "";
+    }
+
+    :where(.css-rrec9u).glarity---popover .glarity---popover-arrow::after {
+      content: "";
+      position: absolute;
+      width: 8.970562748477143px;
+      height: 8.970562748477143px;
+      bottom: 0;
+      inset-inline: 0;
+      margin: auto;
+      border-radius: 0 0 2px 0;
+      transform: translateY(50%) rotate(-135deg);
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+      z-index: 0;
+      background: transparent;
+    }
+
+    :where(.css-rrec9u).glarity---popover .glarity---popover-arrow:before {
+      background: var(--antd-arrow-background-color);
+    }
+
+    :where(.css-rrec9u).glarity---popover-placement-top .glarity---popover-arrow,
+    :where(.css-rrec9u).glarity---popover-placement-topLeft .glarity---popover-arrow,
+    :where(.css-rrec9u).glarity---popover-placement-topRight .glarity---popover-arrow {
+      bottom: 0;
+      transform: translateY(100%) rotate(180deg);
+    }
+
+    :where(.css-rrec9u).glarity---popover-placement-top .glarity---popover-arrow {
+      left: 50%;
+      transform: translateX(-50%) translateY(100%) rotate(180deg);
+    }
+
+    :where(.css-rrec9u).glarity---popover-placement-topLeft .glarity---popover-arrow {
+      left: 12px;
+    }
+
+    :where(.css-rrec9u).glarity---popover-placement-topRight .glarity---popover-arrow {
+      right: 12px;
+    }
+
+    :where(.css-rrec9u).glarity---popover-placement-bottom .glarity---popover-arrow,
+    :where(.css-rrec9u).glarity---popover-placement-bottomLeft .glarity---popover-arrow,
+    :where(.css-rrec9u).glarity---popover-placement-bottomRight .glarity---popover-arrow {
+      top: 0;
+      transform: translateY(-100%);
+    }
+
+    :where(.css-rrec9u).glarity---popover-placement-bottom .glarity---popover-arrow {
+      left: 50%;
+      transform: translateX(-50%) translateY(-100%);
+    }
+
+    :where(.css-rrec9u).glarity---popover-placement-bottomLeft .glarity---popover-arrow {
+      left: 12px;
+    }
+
+    :where(.css-rrec9u).glarity---popover-placement-bottomRight .glarity---popover-arrow {
+      right: 12px;
+    }
+
+    :where(.css-rrec9u).glarity---popover-placement-left .glarity---popover-arrow,
+    :where(.css-rrec9u).glarity---popover-placement-leftTop .glarity---popover-arrow,
+    :where(.css-rrec9u).glarity---popover-placement-leftBottom .glarity---popover-arrow {
+      right: 0;
+      transform: translateX(100%) rotate(90deg);
+    }
+
+    :where(.css-rrec9u).glarity---popover-placement-left .glarity---popover-arrow {
+      top: 50%;
+      transform: translateY(-50%) translateX(100%) rotate(90deg);
+    }
+
+    :where(.css-rrec9u).glarity---popover-placement-leftTop .glarity---popover-arrow {
+      top: 12px;
+    }
+
+    :where(.css-rrec9u).glarity---popover-placement-leftBottom .glarity---popover-arrow {
+      bottom: 12px;
+    }
+
+    :where(.css-rrec9u).glarity---popover-placement-right .glarity---popover-arrow,
+    :where(.css-rrec9u).glarity---popover-placement-rightTop .glarity---popover-arrow,
+    :where(.css-rrec9u).glarity---popover-placement-rightBottom .glarity---popover-arrow {
+      left: 0;
+      transform: translateX(-100%) rotate(-90deg);
+    }
+
+    :where(.css-rrec9u).glarity---popover-placement-right .glarity---popover-arrow {
+      top: 50%;
+      transform: translateY(-50%) translateX(-100%) rotate(-90deg);
+    }
+
+    :where(.css-rrec9u).glarity---popover-placement-rightTop .glarity---popover-arrow {
+      top: 12px;
+    }
+
+    :where(.css-rrec9u).glarity---popover-placement-rightBottom .glarity---popover-arrow {
+      bottom: 12px;
+    }
+
+    :where(.css-rrec9u).glarity---popover-pure {
+      position: relative;
+      max-width: none;
+      margin: 16px;
+      display: inline-block;
+    }
+
+    :where(.css-rrec9u).glarity---popover-pure .glarity---popover-content {
+      display: inline-block;
+    }
+
+    :where(.css-rrec9u).glarity---popover.glarity---popover-blue {
+      --antd-arrow-background-color: #1677ff;
+    }
+
+    :where(.css-rrec9u).glarity---popover.glarity---popover-blue .glarity---popover-inner {
+      background-color: #1677ff;
+    }
+
+    :where(.css-rrec9u).glarity---popover.glarity---popover-blue .glarity---popover-arrow {
+      background: transparent;
+    }
+
+    :where(.css-rrec9u).glarity---popover.glarity---popover-purple {
+      --antd-arrow-background-color: #722ed1;
+    }
+
+    :where(.css-rrec9u).glarity---popover.glarity---popover-purple .glarity---popover-inner {
+      background-color: #722ed1;
+    }
+
+    :where(.css-rrec9u).glarity---popover.glarity---popover-purple .glarity---popover-arrow {
+      background: transparent;
+    }
+
+    :where(.css-rrec9u).glarity---popover.glarity---popover-cyan {
+      --antd-arrow-background-color: #13c2c2;
+    }
+
+    :where(.css-rrec9u).glarity---popover.glarity---popover-cyan .glarity---popover-inner {
+      background-color: #13c2c2;
+    }
+
+    :where(.css-rrec9u).glarity---popover.glarity---popover-cyan .glarity---popover-arrow {
+      background: transparent;
+    }
+
+    :where(.css-rrec9u).glarity---popover.glarity---popover-green {
+      --antd-arrow-background-color: #52c41a;
+    }
+
+    :where(.css-rrec9u).glarity---popover.glarity---popover-green .glarity---popover-inner {
+      background-color: #52c41a;
+    }
+
+    :where(.css-rrec9u).glarity---popover.glarity---popover-green .glarity---popover-arrow {
+      background: transparent;
+    }
+
+    :where(.css-rrec9u).glarity---popover.glarity---popover-magenta {
+      --antd-arrow-background-color: #eb2f96;
+    }
+
+    :where(.css-rrec9u).glarity---popover.glarity---popover-magenta .glarity---popover-inner {
+      background-color: #eb2f96;
+    }
+
+    :where(.css-rrec9u).glarity---popover.glarity---popover-magenta .glarity---popover-arrow {
+      background: transparent;
+    }
+
+    :where(.css-rrec9u).glarity---popover.glarity---popover-pink {
+      --antd-arrow-background-color: #eb2f96;
+    }
+
+    :where(.css-rrec9u).glarity---popover.glarity---popover-pink .glarity---popover-inner {
+      background-color: #eb2f96;
+    }
+
+    :where(.css-rrec9u).glarity---popover.glarity---popover-pink .glarity---popover-arrow {
+      background: transparent;
+    }
+
+    :where(.css-rrec9u).glarity---popover.glarity---popover-red {
+      --antd-arrow-background-color: #f5222d;
+    }
+
+    :where(.css-rrec9u).glarity---popover.glarity---popover-red .glarity---popover-inner {
+      background-color: #f5222d;
+    }
+
+    :where(.css-rrec9u).glarity---popover.glarity---popover-red .glarity---popover-arrow {
+      background: transparent;
+    }
+
+    :where(.css-rrec9u).glarity---popover.glarity---popover-orange {
+      --antd-arrow-background-color: #fa8c16;
+    }
+
+    :where(.css-rrec9u).glarity---popover.glarity---popover-orange .glarity---popover-inner {
+      background-color: #fa8c16;
+    }
+
+    :where(.css-rrec9u).glarity---popover.glarity---popover-orange .glarity---popover-arrow {
+      background: transparent;
+    }
+
+    :where(.css-rrec9u).glarity---popover.glarity---popover-yellow {
+      --antd-arrow-background-color: #fadb14;
+    }
+
+    :where(.css-rrec9u).glarity---popover.glarity---popover-yellow .glarity---popover-inner {
+      background-color: #fadb14;
+    }
+
+    :where(.css-rrec9u).glarity---popover.glarity---popover-yellow .glarity---popover-arrow {
+      background: transparent;
+    }
+
+    :where(.css-rrec9u).glarity---popover.glarity---popover-volcano {
+      --antd-arrow-background-color: #fa541c;
+    }
+
+    :where(.css-rrec9u).glarity---popover.glarity---popover-volcano .glarity---popover-inner {
+      background-color: #fa541c;
+    }
+
+    :where(.css-rrec9u).glarity---popover.glarity---popover-volcano .glarity---popover-arrow {
+      background: transparent;
+    }
+
+    :where(.css-rrec9u).glarity---popover.glarity---popover-geekblue {
+      --antd-arrow-background-color: #2f54eb;
+    }
+
+    :where(.css-rrec9u).glarity---popover.glarity---popover-geekblue .glarity---popover-inner {
+      background-color: #2f54eb;
+    }
+
+    :where(.css-rrec9u).glarity---popover.glarity---popover-geekblue .glarity---popover-arrow {
+      background: transparent;
+    }
+
+    :where(.css-rrec9u).glarity---popover.glarity---popover-lime {
+      --antd-arrow-background-color: #a0d911;
+    }
+
+    :where(.css-rrec9u).glarity---popover.glarity---popover-lime .glarity---popover-inner {
+      background-color: #a0d911;
+    }
+
+    :where(.css-rrec9u).glarity---popover.glarity---popover-lime .glarity---popover-arrow {
+      background: transparent;
+    }
+
+    :where(.css-rrec9u).glarity---popover.glarity---popover-gold {
+      --antd-arrow-background-color: #faad14;
+    }
+
+    :where(.css-rrec9u).glarity---popover.glarity---popover-gold .glarity---popover-inner {
+      background-color: #faad14;
+    }
+
+    :where(.css-rrec9u).glarity---popover.glarity---popover-gold .glarity---popover-arrow {
+      background: transparent;
+    }
+
+    :where(.css-rrec9u).glarity---zoom-big-enter,
+    :where(.css-rrec9u).glarity---zoom-big-appear {
+      animation-duration: 0.2s;
+      animation-fill-mode: both;
+      animation-play-state: paused;
+    }
+
+    :where(.css-rrec9u).glarity---zoom-big-leave {
+      animation-duration: 0.2s;
+      animation-fill-mode: both;
+      animation-play-state: paused;
+    }
+
+    :where(.css-rrec9u).glarity---zoom-big-enter.glarity---zoom-big-enter-active,
+    :where(.css-rrec9u).glarity---zoom-big-appear.glarity---zoom-big-appear-active {
+      animation-name: css-rrec9u-antZoomBigIn;
+      animation-play-state: running;
+    }
+
+    :where(.css-rrec9u).glarity---zoom-big-leave.glarity---zoom-big-leave-active {
+      animation-name: css-rrec9u-antZoomBigOut;
+      animation-play-state: running;
+      pointer-events: none;
+    }
+
+    :where(.css-rrec9u).glarity---zoom-big-enter,
+    :where(.css-rrec9u).glarity---zoom-big-appear {
+      transform: scale(0);
+      opacity: 0;
+      animation-timing-function: cubic-bezier(0.08, 0.82, 0.17, 1);
+    }
+
+    :where(.css-rrec9u).glarity---zoom-big-enter-prepare,
+    :where(.css-rrec9u).glarity---zoom-big-appear-prepare {
+      transform: none;
+    }
+
+    :where(.css-rrec9u).glarity---zoom-big-leave {
+      animation-timing-function: cubic-bezier(0.78, 0.14, 0.15, 0.86);
+    }
+  </style>
+  <style data-rc-order="prependQueue" data-css-hash="_effect-css-rrec9u-antZoomBigIn">
+    @keyframes css-rrec9u-antZoomBigIn {
+      0% {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  </style>
+  <style data-rc-order="prependQueue" data-css-hash="_effect-css-rrec9u-antZoomBigOut">
+    @keyframes css-rrec9u-antZoomBigOut {
+      0% {
+        transform: scale(1);
+      }
+
+      100% {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+    }
+  </style>
+  <style data-rc-order="prependQueue" data-css-hash="v6xobm" data-token-hash="1boblnk"></style>
+  <style data-rc-order="prependQueue" data-css-hash="zig1e4" data-token-hash="1boblnk">
+    :where(.css-rrec9u)[class^="glarity---btn"],
+    :where(.css-rrec9u)[class*=" glarity---btn"] {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+      font-size: 12px;
+      box-sizing: border-box;
+    }
+
+    :where(.css-rrec9u)[class^="glarity---btn"]::before,
+    :where(.css-rrec9u)[class*=" glarity---btn"]::before,
+    :where(.css-rrec9u)[class^="glarity---btn"]::after,
+    :where(.css-rrec9u)[class*=" glarity---btn"]::after {
+      box-sizing: border-box;
+    }
+
+    :where(.css-rrec9u)[class^="glarity---btn"] [class^="glarity---btn"],
+    :where(.css-rrec9u)[class*=" glarity---btn"] [class^="glarity---btn"],
+    :where(.css-rrec9u)[class^="glarity---btn"] [class*=" glarity---btn"],
+    :where(.css-rrec9u)[class*=" glarity---btn"] [class*=" glarity---btn"] {
+      box-sizing: border-box;
+    }
+
+    :where(.css-rrec9u)[class^="glarity---btn"] [class^="glarity---btn"]::before,
+    :where(.css-rrec9u)[class*=" glarity---btn"] [class^="glarity---btn"]::before,
+    :where(.css-rrec9u)[class^="glarity---btn"] [class*=" glarity---btn"]::before,
+    :where(.css-rrec9u)[class*=" glarity---btn"] [class*=" glarity---btn"]::before,
+    :where(.css-rrec9u)[class^="glarity---btn"] [class^="glarity---btn"]::after,
+    :where(.css-rrec9u)[class*=" glarity---btn"] [class^="glarity---btn"]::after,
+    :where(.css-rrec9u)[class^="glarity---btn"] [class*=" glarity---btn"]::after,
+    :where(.css-rrec9u)[class*=" glarity---btn"] [class*=" glarity---btn"]::after {
+      box-sizing: border-box;
+    }
+
+    :where(.css-rrec9u).glarity---btn {
+      outline: none;
+      position: relative;
+      display: inline-block;
+      font-weight: 400;
+      white-space: nowrap;
+      text-align: center;
+      background-image: none;
+      background-color: transparent;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+      user-select: none;
+      touch-action: manipulation;
+      line-height: 1.6666666666666667;
+      color: rgba(0, 0, 0, 0.88);
+    }
+
+    :where(.css-rrec9u).glarity---btn:disabled>* {
+      pointer-events: none;
+    }
+
+    :where(.css-rrec9u).glarity---btn>span {
+      display: inline-block;
+    }
+
+    :where(.css-rrec9u).glarity---btn .glarity---btn-icon {
+      line-height: 0;
+    }
+
+    :where(.css-rrec9u).glarity---btn>.glarity---icon--+span,
+    :where(.css-rrec9u).glarity---btn>span+.glarity---icon-- {
+      margin-inline-start: 4px;
+    }
+
+    :where(.css-rrec9u).glarity---btn:not(.glarity---btn-icon-only)>.glarity---btn-icon.glarity---btn-loading-icon,
+    :where(.css-rrec9u).glarity---btn:not(.glarity---btn-icon-only)>.glarity---btn-icon:not(:last-child) {
+      margin-inline-end: 4px;
+    }
+
+    :where(.css-rrec9u).glarity---btn>a {
+      color: currentColor;
+    }
+
+    :where(.css-rrec9u).glarity---btn:not(:disabled):focus-visible {
+      outline: 4px solid #91caff;
+      outline-offset: 1px;
+      transition: outline-offset 0s, outline 0s;
+    }
+
+    :where(.css-rrec9u).glarity---btn-icon-only.glarity---btn-compact-item {
+      flex: none;
+    }
+
+    :where(.css-rrec9u).glarity---btn-compact-item.glarity---btn-primary:not([disabled])+.glarity---btn-compact-item.glarity---btn-primary:not([disabled]) {
+      position: relative;
+    }
+
+    :where(.css-rrec9u).glarity---btn-compact-item.glarity---btn-primary:not([disabled])+.glarity---btn-compact-item.glarity---btn-primary:not([disabled]):before {
+      position: absolute;
+      top: -1px;
+      inset-inline-start: -1px;
+      display: inline-block;
+      width: 1px;
+      height: calc(100% + 2px);
+      background-color: #4096ff;
+      content: "";
+    }
+
+    :where(.css-rrec9u).glarity---btn-compact-vertical-item.glarity---btn-primary:not([disabled])+.glarity---btn-compact-vertical-item.glarity---btn-primary:not([disabled]) {
+      position: relative;
+    }
+
+    :where(.css-rrec9u).glarity---btn-compact-vertical-item.glarity---btn-primary:not([disabled])+.glarity---btn-compact-vertical-item.glarity---btn-primary:not([disabled]):before {
+      position: absolute;
+      top: -1px;
+      inset-inline-start: -1px;
+      display: inline-block;
+      width: calc(100% + 2px);
+      height: 1px;
+      background-color: #4096ff;
+      content: "";
+    }
+
+    :where(.css-rrec9u).glarity---btn.glarity---btn-sm {
+      font-size: 12px;
+      height: 21px;
+      padding: 0px 7px;
+      border-radius: 4px;
+    }
+
+    :where(.css-rrec9u).glarity---btn.glarity---btn-sm.glarity---btn-icon-only {
+      width: 21px;
+      padding-inline-start: 0;
+      padding-inline-end: 0;
+    }
+
+    :where(.css-rrec9u).glarity---btn.glarity---btn-sm.glarity---btn-icon-only.glarity---btn-round {
+      width: auto;
+    }
+
+    :where(.css-rrec9u).glarity---btn.glarity---btn-sm.glarity---btn-icon-only .glarity---icon-- {
+      font-size: 12px;
+    }
+
+    :where(.css-rrec9u).glarity---btn.glarity---btn-sm.glarity---btn-loading {
+      opacity: 0.65;
+      cursor: default;
+    }
+
+    :where(.css-rrec9u).glarity---btn.glarity---btn-sm .glarity---btn-loading-icon {
+      transition: width 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+
+    :where(.css-rrec9u).glarity---btn.glarity---btn-circle.glarity---btn-sm {
+      min-width: 21px;
+      padding-inline-start: 0;
+      padding-inline-end: 0;
+      border-radius: 50%;
+    }
+
+    :where(.css-rrec9u).glarity---btn.glarity---btn-round.glarity---btn-sm {
+      border-radius: 21px;
+      padding-inline-start: 10.5px;
+      padding-inline-end: 10.5px;
+    }
+
+    :where(.css-rrec9u).glarity---btn {
+      font-size: 12px;
+      height: 28px;
+      padding: 3px 11px;
+      border-radius: 6px;
+    }
+
+    :where(.css-rrec9u).glarity---btn.glarity---btn-icon-only {
+      width: 28px;
+      padding-inline-start: 0;
+      padding-inline-end: 0;
+    }
+
+    :where(.css-rrec9u).glarity---btn.glarity---btn-icon-only.glarity---btn-round {
+      width: auto;
+    }
+
+    :where(.css-rrec9u).glarity---btn.glarity---btn-icon-only .glarity---icon-- {
+      font-size: 14px;
+    }
+
+    :where(.css-rrec9u).glarity---btn.glarity---btn-loading {
+      opacity: 0.65;
+      cursor: default;
+    }
+
+    :where(.css-rrec9u).glarity---btn .glarity---btn-loading-icon {
+      transition: width 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+
+    :where(.css-rrec9u).glarity---btn.glarity---btn-circle {
+      min-width: 28px;
+      padding-inline-start: 0;
+      padding-inline-end: 0;
+      border-radius: 50%;
+    }
+
+    :where(.css-rrec9u).glarity---btn.glarity---btn-round {
+      border-radius: 28px;
+      padding-inline-start: 14px;
+      padding-inline-end: 14px;
+    }
+
+    :where(.css-rrec9u).glarity---btn.glarity---btn-lg {
+      font-size: 14px;
+      height: 35px;
+      padding: 4.833333333333332px 11px;
+      border-radius: 8px;
+    }
+
+    :where(.css-rrec9u).glarity---btn.glarity---btn-lg.glarity---btn-icon-only {
+      width: 35px;
+      padding-inline-start: 0;
+      padding-inline-end: 0;
+    }
+
+    :where(.css-rrec9u).glarity---btn.glarity---btn-lg.glarity---btn-icon-only.glarity---btn-round {
+      width: auto;
+    }
+
+    :where(.css-rrec9u).glarity---btn.glarity---btn-lg.glarity---btn-icon-only .glarity---icon-- {
+      font-size: 16px;
+    }
+
+    :where(.css-rrec9u).glarity---btn.glarity---btn-lg.glarity---btn-loading {
+      opacity: 0.65;
+      cursor: default;
+    }
+
+    :where(.css-rrec9u).glarity---btn.glarity---btn-lg .glarity---btn-loading-icon {
+      transition: width 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+
+    :where(.css-rrec9u).glarity---btn.glarity---btn-circle.glarity---btn-lg {
+      min-width: 35px;
+      padding-inline-start: 0;
+      padding-inline-end: 0;
+      border-radius: 50%;
+    }
+
+    :where(.css-rrec9u).glarity---btn.glarity---btn-round.glarity---btn-lg {
+      border-radius: 35px;
+      padding-inline-start: 17.5px;
+      padding-inline-end: 17.5px;
+    }
+
+    :where(.css-rrec9u).glarity---btn.glarity---btn-block {
+      width: 100%;
+    }
+
+    :where(.css-rrec9u).glarity---btn-default {
+      background-color: #ffffff;
+      border-color: #d9d9d9;
+      box-shadow: 0 2px 0 rgba(0, 0, 0, 0.02);
+    }
+
+    :where(.css-rrec9u).glarity---btn-default:disabled {
+      cursor: not-allowed;
+      border-color: #d9d9d9;
+      color: rgba(0, 0, 0, 0.25);
+      background-color: rgba(0, 0, 0, 0.04);
+      box-shadow: none;
+    }
+
+    :where(.css-rrec9u).glarity---btn-default:not(:disabled):hover {
+      color: #4096ff;
+      border-color: #4096ff;
+    }
+
+    :where(.css-rrec9u).glarity---btn-default:not(:disabled):active {
+      color: #0958d9;
+      border-color: #0958d9;
+    }
+
+    :where(.css-rrec9u).glarity---btn-default.glarity---btn-background-ghost {
+      color: #ffffff;
+      background-color: transparent;
+      border-color: #ffffff;
+      box-shadow: none;
+    }
+
+    :where(.css-rrec9u).glarity---btn-default.glarity---btn-background-ghost:not(:disabled):hover {
+      background-color: transparent;
+    }
+
+    :where(.css-rrec9u).glarity---btn-default.glarity---btn-background-ghost:not(:disabled):active {
+      background-color: transparent;
+    }
+
+    :where(.css-rrec9u).glarity---btn-default.glarity---btn-background-ghost:disabled {
+      cursor: not-allowed;
+      color: rgba(0, 0, 0, 0.25);
+      border-color: #d9d9d9;
+    }
+
+    :where(.css-rrec9u).glarity---btn-default.glarity---btn-dangerous {
+      color: #ff4d4f;
+      border-color: #ff4d4f;
+    }
+
+    :where(.css-rrec9u).glarity---btn-default.glarity---btn-dangerous:not(:disabled):hover {
+      color: #ff7875;
+      border-color: #ffa39e;
+    }
+
+    :where(.css-rrec9u).glarity---btn-default.glarity---btn-dangerous:not(:disabled):active {
+      color: #d9363e;
+      border-color: #d9363e;
+    }
+
+    :where(.css-rrec9u).glarity---btn-default.glarity---btn-dangerous.glarity---btn-background-ghost {
+      color: #ff4d4f;
+      background-color: transparent;
+      border-color: #ff4d4f;
+      box-shadow: none;
+    }
+
+    :where(.css-rrec9u).glarity---btn-default.glarity---btn-dangerous.glarity---btn-background-ghost:not(:disabled):hover {
+      background-color: transparent;
+    }
+
+    :where(.css-rrec9u).glarity---btn-default.glarity---btn-dangerous.glarity---btn-background-ghost:not(:disabled):active {
+      background-color: transparent;
+    }
+
+    :where(.css-rrec9u).glarity---btn-default.glarity---btn-dangerous.glarity---btn-background-ghost:disabled {
+      cursor: not-allowed;
+      color: rgba(0, 0, 0, 0.25);
+      border-color: #d9d9d9;
+    }
+
+    :where(.css-rrec9u).glarity---btn-default.glarity---btn-dangerous:disabled {
+      cursor: not-allowed;
+      border-color: #d9d9d9;
+      color: rgba(0, 0, 0, 0.25);
+      background-color: rgba(0, 0, 0, 0.04);
+      box-shadow: none;
+    }
+
+    :where(.css-rrec9u).glarity---btn-primary {
+      color: #fff;
+      background-color: #1677ff;
+      box-shadow: 0 2px 0 rgba(5, 145, 255, 0.1);
+    }
+
+    :where(.css-rrec9u).glarity---btn-primary:disabled {
+      cursor: not-allowed;
+      border-color: #d9d9d9;
+      color: rgba(0, 0, 0, 0.25);
+      background-color: rgba(0, 0, 0, 0.04);
+      box-shadow: none;
+    }
+
+    :where(.css-rrec9u).glarity---btn-primary:not(:disabled):hover {
+      color: #fff;
+      background-color: #4096ff;
+    }
+
+    :where(.css-rrec9u).glarity---btn-primary:not(:disabled):active {
+      color: #fff;
+      background-color: #0958d9;
+    }
+
+    :where(.css-rrec9u).glarity---btn-primary.glarity---btn-background-ghost {
+      color: #1677ff;
+      background-color: transparent;
+      border-color: #1677ff;
+      box-shadow: none;
+    }
+
+    :where(.css-rrec9u).glarity---btn-primary.glarity---btn-background-ghost:not(:disabled):hover {
+      background-color: transparent;
+      color: #4096ff;
+      border-color: #4096ff;
+    }
+
+    :where(.css-rrec9u).glarity---btn-primary.glarity---btn-background-ghost:not(:disabled):active {
+      background-color: transparent;
+      color: #0958d9;
+      border-color: #0958d9;
+    }
+
+    :where(.css-rrec9u).glarity---btn-primary.glarity---btn-background-ghost:disabled {
+      cursor: not-allowed;
+      color: rgba(0, 0, 0, 0.25);
+      border-color: #d9d9d9;
+    }
+
+    :where(.css-rrec9u).glarity---btn-primary.glarity---btn-dangerous {
+      background-color: #ff4d4f;
+      box-shadow: 0 2px 0 rgba(255, 38, 5, 0.06);
+    }
+
+    :where(.css-rrec9u).glarity---btn-primary.glarity---btn-dangerous:not(:disabled):hover {
+      background-color: #ff7875;
+    }
+
+    :where(.css-rrec9u).glarity---btn-primary.glarity---btn-dangerous:not(:disabled):active {
+      background-color: #d9363e;
+    }
+
+    :where(.css-rrec9u).glarity---btn-primary.glarity---btn-dangerous.glarity---btn-background-ghost {
+      color: #ff4d4f;
+      background-color: transparent;
+      border-color: #ff4d4f;
+      box-shadow: none;
+    }
+
+    :where(.css-rrec9u).glarity---btn-primary.glarity---btn-dangerous.glarity---btn-background-ghost:not(:disabled):hover {
+      background-color: transparent;
+      color: #ff7875;
+      border-color: #ff7875;
+    }
+
+    :where(.css-rrec9u).glarity---btn-primary.glarity---btn-dangerous.glarity---btn-background-ghost:not(:disabled):active {
+      background-color: transparent;
+      color: #d9363e;
+      border-color: #d9363e;
+    }
+
+    :where(.css-rrec9u).glarity---btn-primary.glarity---btn-dangerous.glarity---btn-background-ghost:disabled {
+      cursor: not-allowed;
+      color: rgba(0, 0, 0, 0.25);
+      border-color: #d9d9d9;
+    }
+
+    :where(.css-rrec9u).glarity---btn-primary.glarity---btn-dangerous:disabled {
+      cursor: not-allowed;
+      border-color: #d9d9d9;
+      color: rgba(0, 0, 0, 0.25);
+      background-color: rgba(0, 0, 0, 0.04);
+      box-shadow: none;
+    }
+
+    :where(.css-rrec9u).glarity---btn-dashed {
+      background-color: #ffffff;
+      border-color: #d9d9d9;
+      box-shadow: 0 2px 0 rgba(0, 0, 0, 0.02);
+      border-style: dashed;
+    }
+
+    :where(.css-rrec9u).glarity---btn-dashed:disabled {
+      cursor: not-allowed;
+      border-color: #d9d9d9;
+      color: rgba(0, 0, 0, 0.25);
+      background-color: rgba(0, 0, 0, 0.04);
+      box-shadow: none;
+    }
+
+    :where(.css-rrec9u).glarity---btn-dashed:not(:disabled):hover {
+      color: #4096ff;
+      border-color: #4096ff;
+    }
+
+    :where(.css-rrec9u).glarity---btn-dashed:not(:disabled):active {
+      color: #0958d9;
+      border-color: #0958d9;
+    }
+
+    :where(.css-rrec9u).glarity---btn-dashed.glarity---btn-background-ghost {
+      color: #ffffff;
+      background-color: transparent;
+      border-color: #ffffff;
+      box-shadow: none;
+    }
+
+    :where(.css-rrec9u).glarity---btn-dashed.glarity---btn-background-ghost:not(:disabled):hover {
+      background-color: transparent;
+    }
+
+    :where(.css-rrec9u).glarity---btn-dashed.glarity---btn-background-ghost:not(:disabled):active {
+      background-color: transparent;
+    }
+
+    :where(.css-rrec9u).glarity---btn-dashed.glarity---btn-background-ghost:disabled {
+      cursor: not-allowed;
+      color: rgba(0, 0, 0, 0.25);
+      border-color: #d9d9d9;
+    }
+
+    :where(.css-rrec9u).glarity---btn-dashed.glarity---btn-dangerous {
+      color: #ff4d4f;
+      border-color: #ff4d4f;
+    }
+
+    :where(.css-rrec9u).glarity---btn-dashed.glarity---btn-dangerous:not(:disabled):hover {
+      color: #ff7875;
+      border-color: #ffa39e;
+    }
+
+    :where(.css-rrec9u).glarity---btn-dashed.glarity---btn-dangerous:not(:disabled):active {
+      color: #d9363e;
+      border-color: #d9363e;
+    }
+
+    :where(.css-rrec9u).glarity---btn-dashed.glarity---btn-dangerous.glarity---btn-background-ghost {
+      color: #ff4d4f;
+      background-color: transparent;
+      border-color: #ff4d4f;
+      box-shadow: none;
+    }
+
+    :where(.css-rrec9u).glarity---btn-dashed.glarity---btn-dangerous.glarity---btn-background-ghost:not(:disabled):hover {
+      background-color: transparent;
+    }
+
+    :where(.css-rrec9u).glarity---btn-dashed.glarity---btn-dangerous.glarity---btn-background-ghost:not(:disabled):active {
+      background-color: transparent;
+    }
+
+    :where(.css-rrec9u).glarity---btn-dashed.glarity---btn-dangerous.glarity---btn-background-ghost:disabled {
+      cursor: not-allowed;
+      color: rgba(0, 0, 0, 0.25);
+      border-color: #d9d9d9;
+    }
+
+    :where(.css-rrec9u).glarity---btn-dashed.glarity---btn-dangerous:disabled {
+      cursor: not-allowed;
+      border-color: #d9d9d9;
+      color: rgba(0, 0, 0, 0.25);
+      background-color: rgba(0, 0, 0, 0.04);
+      box-shadow: none;
+    }
+
+    :where(.css-rrec9u).glarity---btn-link {
+      color: #1677ff;
+    }
+
+    :where(.css-rrec9u).glarity---btn-link:not(:disabled):hover {
+      color: #69b1ff;
+    }
+
+    :where(.css-rrec9u).glarity---btn-link:not(:disabled):active {
+      color: #0958d9;
+    }
+
+    :where(.css-rrec9u).glarity---btn-link:disabled {
+      cursor: not-allowed;
+      color: rgba(0, 0, 0, 0.25);
+    }
+
+    :where(.css-rrec9u).glarity---btn-link.glarity---btn-dangerous {
+      color: #ff4d4f;
+    }
+
+    :where(.css-rrec9u).glarity---btn-link.glarity---btn-dangerous:not(:disabled):hover {
+      color: #ff7875;
+    }
+
+    :where(.css-rrec9u).glarity---btn-link.glarity---btn-dangerous:not(:disabled):active {
+      color: #d9363e;
+    }
+
+    :where(.css-rrec9u).glarity---btn-link.glarity---btn-dangerous:disabled {
+      cursor: not-allowed;
+      color: rgba(0, 0, 0, 0.25);
+    }
+
+    :where(.css-rrec9u).glarity---btn-text:not(:disabled):hover {
+      color: rgba(0, 0, 0, 0.88);
+      background-color: rgba(0, 0, 0, 0.06);
+    }
+
+    :where(.css-rrec9u).glarity---btn-text:not(:disabled):active {
+      color: rgba(0, 0, 0, 0.88);
+      background-color: rgba(0, 0, 0, 0.15);
+    }
+
+    :where(.css-rrec9u).glarity---btn-text:disabled {
+      cursor: not-allowed;
+      color: rgba(0, 0, 0, 0.25);
+    }
+
+    :where(.css-rrec9u).glarity---btn-text.glarity---btn-dangerous {
+      color: #ff4d4f;
+    }
+
+    :where(.css-rrec9u).glarity---btn-text.glarity---btn-dangerous:disabled {
+      cursor: not-allowed;
+      color: rgba(0, 0, 0, 0.25);
+    }
+
+    :where(.css-rrec9u).glarity---btn-text.glarity---btn-dangerous:not(:disabled):hover {
+      color: #ff7875;
+      background-color: #fff2f0;
+    }
+
+    :where(.css-rrec9u).glarity---btn-text.glarity---btn-dangerous:not(:disabled):active {
+      color: #ff7875;
+      background-color: #fff2f0;
+    }
+
+    :where(.css-rrec9u).glarity---btn-disabled {
+      cursor: not-allowed;
+      border-color: #d9d9d9;
+      color: rgba(0, 0, 0, 0.25);
+      background-color: rgba(0, 0, 0, 0.04);
+      box-shadow: none;
+    }
+
+    :where(.css-rrec9u).glarity---btn-disabled.glarity---btn:hover {
+      cursor: not-allowed;
+      border-color: #d9d9d9;
+      color: rgba(0, 0, 0, 0.25);
+      background-color: rgba(0, 0, 0, 0.04);
+      box-shadow: none;
+    }
+
+    :where(.css-rrec9u).glarity---btn-group {
+      position: relative;
+      display: inline-flex;
+    }
+
+    :where(.css-rrec9u).glarity---btn-group>span:not(:last-child),
+    :where(.css-rrec9u).glarity---btn-group>.glarity---btn:not(:last-child),
+    :where(.css-rrec9u).glarity---btn-group>span:not(:last-child)>.glarity---btn,
+    :where(.css-rrec9u).glarity---btn-group>.glarity---btn:not(:last-child)>.glarity---btn {
+      border-start-end-radius: 0;
+      border-end-end-radius: 0;
+    }
+
+    :where(.css-rrec9u).glarity---btn-group>span:not(:first-child),
+    :where(.css-rrec9u).glarity---btn-group>.glarity---btn:not(:first-child) {
+      margin-inline-start: -1px;
+    }
+
+    :where(.css-rrec9u).glarity---btn-group>span:not(:first-child),
+    :where(.css-rrec9u).glarity---btn-group>.glarity---btn:not(:first-child),
+    :where(.css-rrec9u).glarity---btn-group>span:not(:first-child)>.glarity---btn,
+    :where(.css-rrec9u).glarity---btn-group>.glarity---btn:not(:first-child)>.glarity---btn {
+      border-start-start-radius: 0;
+      border-end-start-radius: 0;
+    }
+
+    :where(.css-rrec9u).glarity---btn-group .glarity---btn {
+      position: relative;
+      z-index: 1;
+    }
+
+    :where(.css-rrec9u).glarity---btn-group .glarity---btn:hover,
+    :where(.css-rrec9u).glarity---btn-group .glarity---btn:focus,
+    :where(.css-rrec9u).glarity---btn-group .glarity---btn:active {
+      z-index: 2;
+    }
+
+    :where(.css-rrec9u).glarity---btn-group .glarity---btn[disabled] {
+      z-index: 0;
+    }
+
+    :where(.css-rrec9u).glarity---btn-group .glarity---btn-icon-only {
+      font-size: 12px;
+    }
+
+    :where(.css-rrec9u).glarity---btn-group>span:not(:last-child):not(:disabled),
+    :where(.css-rrec9u).glarity---btn-group>.glarity---btn-primary:not(:last-child):not(:disabled),
+    :where(.css-rrec9u).glarity---btn-group>span:not(:last-child)>.glarity---btn-primary:not(:disabled),
+    :where(.css-rrec9u).glarity---btn-group>.glarity---btn-primary:not(:last-child)>.glarity---btn-primary:not(:disabled) {
+      border-inline-end-color: #4096ff;
+    }
+
+    :where(.css-rrec9u).glarity---btn-group>span:not(:first-child):not(:disabled),
+    :where(.css-rrec9u).glarity---btn-group>.glarity---btn-primary:not(:first-child):not(:disabled),
+    :where(.css-rrec9u).glarity---btn-group>span:not(:first-child)>.glarity---btn-primary:not(:disabled),
+    :where(.css-rrec9u).glarity---btn-group>.glarity---btn-primary:not(:first-child)>.glarity---btn-primary:not(:disabled) {
+      border-inline-start-color: #4096ff;
+    }
+
+    :where(.css-rrec9u).glarity---btn-group>span:not(:last-child):not(:disabled),
+    :where(.css-rrec9u).glarity---btn-group>.glarity---btn-danger:not(:last-child):not(:disabled),
+    :where(.css-rrec9u).glarity---btn-group>span:not(:last-child)>.glarity---btn-danger:not(:disabled),
+    :where(.css-rrec9u).glarity---btn-group>.glarity---btn-danger:not(:last-child)>.glarity---btn-danger:not(:disabled) {
+      border-inline-end-color: #ff7875;
+    }
+
+    :where(.css-rrec9u).glarity---btn-group>span:not(:first-child):not(:disabled),
+    :where(.css-rrec9u).glarity---btn-group>.glarity---btn-danger:not(:first-child):not(:disabled),
+    :where(.css-rrec9u).glarity---btn-group>span:not(:first-child)>.glarity---btn-danger:not(:disabled),
+    :where(.css-rrec9u).glarity---btn-group>.glarity---btn-danger:not(:first-child)>.glarity---btn-danger:not(:disabled) {
+      border-inline-start-color: #ff7875;
+    }
+
+    :where(.css-rrec9u).glarity---btn-compact-item:not(.glarity---btn-compact-last-item) {
+      margin-inline-end: -1px;
+    }
+
+    :where(.css-rrec9u).glarity---btn-compact-item:hover,
+    :where(.css-rrec9u).glarity---btn-compact-item:focus,
+    :where(.css-rrec9u).glarity---btn-compact-item:active {
+      z-index: 2;
+    }
+
+    :where(.css-rrec9u).glarity---btn-compact-item[disabled] {
+      z-index: 0;
+    }
+
+    :where(.css-rrec9u).glarity---btn-compact-item:not(.glarity---btn-compact-first-item):not(.glarity---btn-compact-last-item) {
+      border-radius: 0;
+    }
+
+    :where(.css-rrec9u).glarity---btn-compact-item:not(.glarity---btn-compact-last-item).glarity---btn-compact-first-item,
+    :where(.css-rrec9u).glarity---btn-compact-item:not(.glarity---btn-compact-last-item).glarity---btn-compact-first-item.glarity---btn-sm,
+    :where(.css-rrec9u).glarity---btn-compact-item:not(.glarity---btn-compact-last-item).glarity---btn-compact-first-item.glarity---btn-lg {
+      border-start-end-radius: 0;
+      border-end-end-radius: 0;
+    }
+
+    :where(.css-rrec9u).glarity---btn-compact-item:not(.glarity---btn-compact-first-item).glarity---btn-compact-last-item,
+    :where(.css-rrec9u).glarity---btn-compact-item:not(.glarity---btn-compact-first-item).glarity---btn-compact-last-item.glarity---btn-sm,
+    :where(.css-rrec9u).glarity---btn-compact-item:not(.glarity---btn-compact-first-item).glarity---btn-compact-last-item.glarity---btn-lg {
+      border-start-start-radius: 0;
+      border-end-start-radius: 0;
+    }
+
+    :where(.css-rrec9u).glarity---btn-compact-vertical-item:not(.glarity---btn-compact-vertical-last-item) {
+      margin-bottom: -1px;
+    }
+
+    :where(.css-rrec9u).glarity---btn-compact-vertical-item:hover,
+    :where(.css-rrec9u).glarity---btn-compact-vertical-item:focus,
+    :where(.css-rrec9u).glarity---btn-compact-vertical-item:active {
+      z-index: 2;
+    }
+
+    :where(.css-rrec9u).glarity---btn-compact-vertical-item[disabled] {
+      z-index: 0;
+    }
+
+    :where(.css-rrec9u).glarity---btn-compact-vertical-item:not(.glarity---btn-compact-vertical-first-item):not(.glarity---btn-compact-vertical-last-item) {
+      border-radius: 0;
+    }
+
+    :where(.css-rrec9u).glarity---btn-compact-vertical-item.glarity---btn-compact-vertical-first-item:not(.glarity---btn-compact-vertical-last-item),
+    :where(.css-rrec9u).glarity---btn-compact-vertical-item.glarity---btn-compact-vertical-first-item:not(.glarity---btn-compact-vertical-last-item).glarity---btn-sm,
+    :where(.css-rrec9u).glarity---btn-compact-vertical-item.glarity---btn-compact-vertical-first-item:not(.glarity---btn-compact-vertical-last-item).glarity---btn-lg {
+      border-end-end-radius: 0;
+      border-end-start-radius: 0;
+    }
+
+    :where(.css-rrec9u).glarity---btn-compact-vertical-item.glarity---btn-compact-vertical-last-item:not(.glarity---btn-compact-vertical-first-item),
+    :where(.css-rrec9u).glarity---btn-compact-vertical-item.glarity---btn-compact-vertical-last-item:not(.glarity---btn-compact-vertical-first-item).glarity---btn-sm,
+    :where(.css-rrec9u).glarity---btn-compact-vertical-item.glarity---btn-compact-vertical-last-item:not(.glarity---btn-compact-vertical-first-item).glarity---btn-lg {
+      border-start-start-radius: 0;
+      border-start-end-radius: 0;
+    }
+  </style>
+  <style data-rc-order="prependQueue" data-css-hash="133a7xw" data-token-hash="1boblnk">
+    :where(.css-rrec9u)[class^="glarity---wave"],
+    :where(.css-rrec9u)[class*=" glarity---wave"] {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+      font-size: 12px;
+      box-sizing: border-box;
+    }
+
+    :where(.css-rrec9u)[class^="glarity---wave"]::before,
+    :where(.css-rrec9u)[class*=" glarity---wave"]::before,
+    :where(.css-rrec9u)[class^="glarity---wave"]::after,
+    :where(.css-rrec9u)[class*=" glarity---wave"]::after {
+      box-sizing: border-box;
+    }
+
+    :where(.css-rrec9u)[class^="glarity---wave"] [class^="glarity---wave"],
+    :where(.css-rrec9u)[class*=" glarity---wave"] [class^="glarity---wave"],
+    :where(.css-rrec9u)[class^="glarity---wave"] [class*=" glarity---wave"],
+    :where(.css-rrec9u)[class*=" glarity---wave"] [class*=" glarity---wave"] {
+      box-sizing: border-box;
+    }
+
+    :where(.css-rrec9u)[class^="glarity---wave"] [class^="glarity---wave"]::before,
+    :where(.css-rrec9u)[class*=" glarity---wave"] [class^="glarity---wave"]::before,
+    :where(.css-rrec9u)[class^="glarity---wave"] [class*=" glarity---wave"]::before,
+    :where(.css-rrec9u)[class*=" glarity---wave"] [class*=" glarity---wave"]::before,
+    :where(.css-rrec9u)[class^="glarity---wave"] [class^="glarity---wave"]::after,
+    :where(.css-rrec9u)[class*=" glarity---wave"] [class^="glarity---wave"]::after,
+    :where(.css-rrec9u)[class^="glarity---wave"] [class*=" glarity---wave"]::after,
+    :where(.css-rrec9u)[class*=" glarity---wave"] [class*=" glarity---wave"]::after {
+      box-sizing: border-box;
+    }
+
+    :where(.css-rrec9u).glarity---wave {
+      position: absolute;
+      background: transparent;
+      pointer-events: none;
+      box-sizing: border-box;
+      color: var(--wave-color, #1677ff);
+      box-shadow: 0 0 0 0 currentcolor;
+      opacity: 0.2;
+    }
+
+    :where(.css-rrec9u).glarity---wave.wave-motion-appear {
+      transition: box-shadow 0.4s cubic-bezier(0.08, 0.82, 0.17, 1), opacity 2s cubic-bezier(0.08, 0.82, 0.17, 1);
+    }
+
+    :where(.css-rrec9u).glarity---wave.wave-motion-appear-active {
+      box-shadow: 0 0 0 6px currentcolor;
+      opacity: 0;
+    }
+  </style>
+  <style data-rc-order="prependQueue" data-css-hash="1k3z7y0" data-token-hash="1boblnk">
+    :where(.css-rrec9u)[class^="glarity---modal"],
+    :where(.css-rrec9u)[class*=" glarity---modal"] {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+      font-size: 12px;
+      box-sizing: border-box;
+    }
+
+    :where(.css-rrec9u)[class^="glarity---modal"]::before,
+    :where(.css-rrec9u)[class*=" glarity---modal"]::before,
+    :where(.css-rrec9u)[class^="glarity---modal"]::after,
+    :where(.css-rrec9u)[class*=" glarity---modal"]::after {
+      box-sizing: border-box;
+    }
+
+    :where(.css-rrec9u)[class^="glarity---modal"] [class^="glarity---modal"],
+    :where(.css-rrec9u)[class*=" glarity---modal"] [class^="glarity---modal"],
+    :where(.css-rrec9u)[class^="glarity---modal"] [class*=" glarity---modal"],
+    :where(.css-rrec9u)[class*=" glarity---modal"] [class*=" glarity---modal"] {
+      box-sizing: border-box;
+    }
+
+    :where(.css-rrec9u)[class^="glarity---modal"] [class^="glarity---modal"]::before,
+    :where(.css-rrec9u)[class*=" glarity---modal"] [class^="glarity---modal"]::before,
+    :where(.css-rrec9u)[class^="glarity---modal"] [class*=" glarity---modal"]::before,
+    :where(.css-rrec9u)[class*=" glarity---modal"] [class*=" glarity---modal"]::before,
+    :where(.css-rrec9u)[class^="glarity---modal"] [class^="glarity---modal"]::after,
+    :where(.css-rrec9u)[class*=" glarity---modal"] [class^="glarity---modal"]::after,
+    :where(.css-rrec9u)[class^="glarity---modal"] [class*=" glarity---modal"]::after,
+    :where(.css-rrec9u)[class*=" glarity---modal"] [class*=" glarity---modal"]::after {
+      box-sizing: border-box;
+    }
+
+    :where(.css-rrec9u).glarity---modal-root .glarity---modal-wrap {
+      z-index: 1000;
+      position: fixed;
+      inset: 0;
+      overflow: auto;
+      outline: 0;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    :where(.css-rrec9u).glarity---modal-root .glarity---modal-wrap-rtl {
+      direction: rtl;
+    }
+
+    :where(.css-rrec9u).glarity---modal-root .glarity---modal-centered {
+      text-align: center;
+    }
+
+    :where(.css-rrec9u).glarity---modal-root .glarity---modal-centered::before {
+      display: inline-block;
+      width: 0;
+      height: 100%;
+      vertical-align: middle;
+      content: "";
+    }
+
+    :where(.css-rrec9u).glarity---modal-root .glarity---modal-centered .glarity---modal {
+      top: 0;
+      display: inline-block;
+      padding-bottom: 0;
+      text-align: start;
+      vertical-align: middle;
+    }
+
+    @media (max-width: 767) {
+      :where(.css-rrec9u).glarity---modal-root .glarity---modal {
+        max-width: calc(100vw - 16px);
+        margin: 4 auto;
+      }
+
+      :where(.css-rrec9u).glarity---modal-root .glarity---modal-centered .glarity---modal {
+        flex: 1;
+      }
+    }
+
+    :where(.css-rrec9u).glarity---modal {
+      box-sizing: border-box;
+      margin: 0 auto;
+      padding: 0;
+      color: rgba(0, 0, 0, 0.88);
+      font-size: 12px;
+      line-height: 1.6666666666666667;
+      list-style: none;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+      pointer-events: none;
+      position: relative;
+      top: 100px;
+      width: auto;
+      max-width: calc(100vw - 16px);
+      padding-bottom: 16px;
+    }
+
+    :where(.css-rrec9u).glarity---modal .glarity---modal-title {
+      margin: 0;
+      color: rgba(0, 0, 0, 0.88);
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 1.5714285714285714;
+      word-wrap: break-word;
+    }
+
+    :where(.css-rrec9u).glarity---modal .glarity---modal-content {
+      position: relative;
+      background-color: #ffffff;
+      background-clip: padding-box;
+      border: 0;
+      border-radius: 8px;
+      box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+      pointer-events: auto;
+      padding: 16px 16px;
+    }
+
+    :where(.css-rrec9u).glarity---modal .glarity---modal-close {
+      position: absolute;
+      top: 9px;
+      inset-inline-end: 9px;
+      z-index: 1010;
+      padding: 0;
+      color: rgba(0, 0, 0, 0.45);
+      font-weight: 600;
+      line-height: 1;
+      text-decoration: none;
+      background: transparent;
+      border-radius: 4px;
+      width: 20px;
+      height: 20px;
+      border: 0;
+      outline: 0;
+      cursor: pointer;
+      transition: color 0.2s, background-color 0.2s;
+    }
+
+    :where(.css-rrec9u).glarity---modal .glarity---modal-close-x {
+      display: flex;
+      font-size: 14px;
+      font-style: normal;
+      line-height: 20px;
+      justify-content: center;
+      text-transform: none;
+      text-rendering: auto;
+    }
+
+    :where(.css-rrec9u).glarity---modal .glarity---modal-close:hover {
+      color: rgba(0, 0, 0, 0.88);
+      background-color: rgba(0, 0, 0, 0.06);
+      text-decoration: none;
+    }
+
+    :where(.css-rrec9u).glarity---modal .glarity---modal-close:active {
+      background-color: rgba(0, 0, 0, 0.15);
+    }
+
+    :where(.css-rrec9u).glarity---modal .glarity---modal-close:focus-visible {
+      outline: 4px solid #91caff;
+      outline-offset: 1px;
+      transition: outline-offset 0s, outline 0s;
+    }
+
+    :where(.css-rrec9u).glarity---modal .glarity---modal-header {
+      color: rgba(0, 0, 0, 0.88);
+      background: #ffffff;
+      border-radius: 8px 8px 0 0;
+      margin-bottom: 4px;
+    }
+
+    :where(.css-rrec9u).glarity---modal .glarity---modal-body {
+      font-size: 12px;
+      line-height: 1.6666666666666667;
+      word-wrap: break-word;
+    }
+
+    :where(.css-rrec9u).glarity---modal .glarity---modal-footer {
+      text-align: end;
+      background: transparent;
+      margin-top: 8px;
+    }
+
+    :where(.css-rrec9u).glarity---modal .glarity---modal-footer .glarity---btn+.glarity---btn:not(.glarity---dropdown-trigger) {
+      margin-bottom: 0;
+      margin-inline-start: 4px;
+    }
+
+    :where(.css-rrec9u).glarity---modal .glarity---modal-open {
+      overflow: hidden;
+    }
+
+    :where(.css-rrec9u).glarity---modal-pure-panel {
+      top: auto;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    :where(.css-rrec9u).glarity---modal-pure-panel .glarity---modal-content,
+    :where(.css-rrec9u).glarity---modal-pure-panel .glarity---modal-body,
+    :where(.css-rrec9u).glarity---modal-pure-panel .glarity---modal-confirm-body-wrapper {
+      display: flex;
+      flex-direction: column;
+      flex: auto;
+    }
+
+    :where(.css-rrec9u).glarity---modal-pure-panel .glarity---modal-confirm-body {
+      margin-bottom: auto;
+    }
+
+    :where(.css-rrec9u).glarity---modal-confirm-rtl {
+      direction: rtl;
+    }
+
+    :where(.css-rrec9u).glarity---modal-confirm .glarity---modal-header {
+      display: none;
+    }
+
+    :where(.css-rrec9u).glarity---modal-confirm .glarity---modal-confirm-body-wrapper::before {
+      display: table;
+      content: "";
+    }
+
+    :where(.css-rrec9u).glarity---modal-confirm .glarity---modal-confirm-body-wrapper::after {
+      display: table;
+      clear: both;
+      content: "";
+    }
+
+    :where(.css-rrec9u).glarity---modal-confirm .glarity---modal-confirm-body {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    :where(.css-rrec9u).glarity---modal-confirm .glarity---modal-confirm-body .glarity---modal-confirm-title {
+      flex: 0 0 100%;
+      display: block;
+      overflow: hidden;
+      color: rgba(0, 0, 0, 0.88);
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 1.5714285714285714;
+    }
+
+    :where(.css-rrec9u).glarity---modal-confirm .glarity---modal-confirm-body .glarity---modal-confirm-title+.glarity---modal-confirm-content {
+      margin-block-start: 4px;
+      flex-basis: 100%;
+      max-width: calc(100% - 28px);
+    }
+
+    :where(.css-rrec9u).glarity---modal-confirm .glarity---modal-confirm-body .glarity---modal-confirm-content {
+      color: rgba(0, 0, 0, 0.88);
+      font-size: 12px;
+    }
+
+    :where(.css-rrec9u).glarity---modal-confirm .glarity---modal-confirm-body>.glarity---icon-- {
+      flex: none;
+      margin-inline-end: 8px;
+      font-size: 20px;
+    }
+
+    :where(.css-rrec9u).glarity---modal-confirm .glarity---modal-confirm-body>.glarity---icon--+.glarity---modal-confirm-title {
+      flex: 1;
+    }
+
+    :where(.css-rrec9u).glarity---modal-confirm .glarity---modal-confirm-body>.glarity---icon--+.glarity---modal-confirm-title+.glarity---modal-confirm-content {
+      margin-inline-start: 28px;
+    }
+
+    :where(.css-rrec9u).glarity---modal-confirm .glarity---modal-confirm-btns {
+      text-align: end;
+      margin-top: 8px;
+    }
+
+    :where(.css-rrec9u).glarity---modal-confirm .glarity---modal-confirm-btns .glarity---btn+.glarity---btn {
+      margin-bottom: 0;
+      margin-inline-start: 4px;
+    }
+
+    :where(.css-rrec9u).glarity---modal-confirm-error .glarity---modal-confirm-body>.glarity---icon-- {
+      color: #ff4d4f;
+    }
+
+    :where(.css-rrec9u).glarity---modal-confirm-warning .glarity---modal-confirm-body>.glarity---icon--,
+    :where(.css-rrec9u).glarity---modal-confirm-confirm .glarity---modal-confirm-body>.glarity---icon-- {
+      color: #faad14;
+    }
+
+    :where(.css-rrec9u).glarity---modal-confirm-info .glarity---modal-confirm-body>.glarity---icon-- {
+      color: #1677ff;
+    }
+
+    :where(.css-rrec9u).glarity---modal-confirm-success .glarity---modal-confirm-body>.glarity---icon-- {
+      color: #52c41a;
+    }
+
+    :where(.css-rrec9u).glarity---modal-root .glarity---modal-wrap-rtl {
+      direction: rtl;
+    }
+
+    :where(.css-rrec9u).glarity---modal-root .glarity---modal-wrap-rtl .glarity---modal-confirm-body {
+      direction: rtl;
+    }
+
+    :where(.css-rrec9u).glarity---modal-root .glarity---modal.glarity---zoom-enter,
+    :where(.css-rrec9u).glarity---modal-root .glarity---modal.glarity---zoom-appear {
+      transform: none;
+      opacity: 0;
+      animation-duration: 0.3s;
+      user-select: none;
+    }
+
+    :where(.css-rrec9u).glarity---modal-root .glarity---modal.glarity---zoom-leave .glarity---modal-content {
+      pointer-events: none;
+    }
+
+    :where(.css-rrec9u).glarity---modal-root .glarity---modal-mask {
+      position: fixed;
+      top: 0;
+      inset-inline-end: 0;
+      bottom: 0;
+      inset-inline-start: 0;
+      z-index: 1000;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.45);
+    }
+
+    :where(.css-rrec9u).glarity---modal-root .glarity---modal-mask .glarity---modal-hidden {
+      display: none;
+    }
+
+    :where(.css-rrec9u).glarity---modal-root .glarity---modal-wrap {
+      position: fixed;
+      top: 0;
+      inset-inline-end: 0;
+      bottom: 0;
+      inset-inline-start: 0;
+      overflow: auto;
+      outline: 0;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    :where(.css-rrec9u).glarity---modal-root .glarity---fade-enter,
+    :where(.css-rrec9u).glarity---modal-root .glarity---fade-appear {
+      animation-duration: 0.2s;
+      animation-fill-mode: both;
+      animation-play-state: paused;
+    }
+
+    :where(.css-rrec9u).glarity---modal-root .glarity---fade-leave {
+      animation-duration: 0.2s;
+      animation-fill-mode: both;
+      animation-play-state: paused;
+    }
+
+    :where(.css-rrec9u).glarity---modal-root .glarity---fade-enter.glarity---fade-enter-active,
+    :where(.css-rrec9u).glarity---modal-root .glarity---fade-appear.glarity---fade-appear-active {
+      animation-name: css-rrec9u-antFadeIn;
+      animation-play-state: running;
+    }
+
+    :where(.css-rrec9u).glarity---modal-root .glarity---fade-leave.glarity---fade-leave-active {
+      animation-name: css-rrec9u-antFadeOut;
+      animation-play-state: running;
+      pointer-events: none;
+    }
+
+    :where(.css-rrec9u).glarity---modal-root .glarity---fade-enter,
+    :where(.css-rrec9u).glarity---modal-root .glarity---fade-appear {
+      opacity: 0;
+      animation-timing-function: linear;
+    }
+
+    :where(.css-rrec9u).glarity---modal-root .glarity---fade-leave {
+      animation-timing-function: linear;
+    }
+
+    :where(.css-rrec9u).glarity---zoom-enter,
+    :where(.css-rrec9u).glarity---zoom-appear {
+      animation-duration: 0.2s;
+      animation-fill-mode: both;
+      animation-play-state: paused;
+    }
+
+    :where(.css-rrec9u).glarity---zoom-leave {
+      animation-duration: 0.2s;
+      animation-fill-mode: both;
+      animation-play-state: paused;
+    }
+
+    :where(.css-rrec9u).glarity---zoom-enter.glarity---zoom-enter-active,
+    :where(.css-rrec9u).glarity---zoom-appear.glarity---zoom-appear-active {
+      animation-name: css-rrec9u-antZoomIn;
+      animation-play-state: running;
+    }
+
+    :where(.css-rrec9u).glarity---zoom-leave.glarity---zoom-leave-active {
+      animation-name: css-rrec9u-antZoomOut;
+      animation-play-state: running;
+      pointer-events: none;
+    }
+
+    :where(.css-rrec9u).glarity---zoom-enter,
+    :where(.css-rrec9u).glarity---zoom-appear {
+      transform: scale(0);
+      opacity: 0;
+      animation-timing-function: cubic-bezier(0.08, 0.82, 0.17, 1);
+    }
+
+    :where(.css-rrec9u).glarity---zoom-enter-prepare,
+    :where(.css-rrec9u).glarity---zoom-appear-prepare {
+      transform: none;
+    }
+
+    :where(.css-rrec9u).glarity---zoom-leave {
+      animation-timing-function: cubic-bezier(0.78, 0.14, 0.15, 0.86);
+    }
+  </style>
+  <style data-rc-order="prependQueue" data-css-hash="_effect-css-rrec9u-antFadeIn">
+    @keyframes css-rrec9u-antFadeIn {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+  </style>
+  <style data-rc-order="prependQueue" data-css-hash="_effect-css-rrec9u-antFadeOut">
+    @keyframes css-rrec9u-antFadeOut {
+      0% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+  </style>
+  <style data-rc-order="prependQueue" data-css-hash="_effect-css-rrec9u-antZoomIn">
+    @keyframes css-rrec9u-antZoomIn {
+      0% {
+        transform: scale(0.2);
+        opacity: 0;
+      }
+
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  </style>
+  <style data-rc-order="prependQueue" data-css-hash="_effect-css-rrec9u-antZoomOut">
+    @keyframes css-rrec9u-antZoomOut {
+      0% {
+        transform: scale(1);
+      }
+
+      100% {
+        transform: scale(0.2);
+        opacity: 0;
+      }
+    }
+  </style>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="csrf-param" content="authenticity_token">
+  <meta name="csrf-token"
+    content="y4P9dDo2yHSqqaiWfBr_1EVFN2G3arD7cSaA6tr98SwY8JSXbHlWSjF7mWVpk8amCbBiEdLMZnyA5xsgFUgZXg">
+  <link rel="stylesheet" href="./css/tailwind-6728493f59706c7b9db86f263118ec169a27193118939e4574d2641223de37c6.css"
+    data-turbo-track="reload">
+  <link rel="stylesheet" href="./css/inter-font-8c3e82affb176f4bca9616b838d906343d1251adc8408efe02cf2b1e4fcf2bc4.css"
+    data-turbo-track="reload">
+  <title>AI Learning Group | AI Technology School</title>
+  <link rel="icon" type="image/png" href="./img/favicon.png"
+    sizes="8x8 16x16 32x32 96x96">
+  <meta name="description" content="Unlock the power of AI with our comprehensive courses and training programs.">
+  <link rel="canonical" href="https://gla.edu.kg/">
+  <meta property="og:site" content="https://gla.edu.kg/">
+  <meta property="og:title" content="Create a Custom Landing Page in 60 seconds">
+  <meta property="og:description"
+    content="Create a custom landing page for your SaaS, Product or Shopify app in 60 seconds with our easy to use landing page generator.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gla.edu.kg/">
+  <meta property="og:image"
+    content="./img/assets/opengraph-fe49e4cf545c43ca02310a8713ad59a496845e393772d716d3b0500d8937c68d.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@60sec_site">
+  <meta name="twitter:title" content="Create a Custom Landing Page in 60 seconds">
+  <meta name="twitter:description"
+    content="Create a custom landing page for your SaaS, Product or Shopify app in 60 seconds with our easy to use landing page generator.">
+  <meta name="twitter:image"
+    content="./img/assets/opengraph-fe49e4cf545c43ca02310a8713ad59a496845e393772d716d3b0500d8937c68d.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI Learning Group">
+  <meta name="twitter:description"
+    content="Unlock the power of AI with our comprehensive courses and training programs.">
+  <meta property="og:title" content="AI Learning Group">
+  <meta property="og:description"
+    content="Unlock the power of AI with our comprehensive courses and training programs.">
+  <meta property="og:site_name" content="AI Learning Group">
+  <meta property="og:type" content="website">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="AI Learning Group">
+  <meta property="og:url" content="gla.edu.kg">
+  <meta name="url" content="gla.edu.kg">
+  <meta name="type" content="website">
+  <link rel="stylesheet" href="./css/application-bc867240d61884e9117f5ccbb0924c9081ab0466e00f0124a56b948fef36fe8e.css"
+    media="all" data-turbo-track="reload">
+  <script type="importmap" data-turbo-track="reload">{
+  "imports": {
+    "application": "./js/assets/application-f73e8855bcc363bfbab8f71452cac22eeb33717ac000963f65e88e23603a5e89.js",
+    "@hotwired/turbo-rails": "./js/assets/turbo.min-f309baafa3ae5ad6ccee3e7362118b87678d792db8e8ab466c4fa284dd3a4700.js",
+    "@hotwired/stimulus": "./js/assets/stimulus.min-d03cf1dff41d6c5698ec2c5d6a501615a7a33754dbeef8d1edd31c928d17c652.js",
+    "@hotwired/stimulus-loading": "./js/assets/stimulus-loading-1fc59770fb1654500044afd3f5f6d7d00800e5be36746d55b94a2963a7a228aa.js",
+    "ahoy": "./js/assets/ahoy-d491dff1db4cfab8109cffd2f55ede665dbf8e5326c4a305a7508e7277210071.js",
+    "controllers/application": "./js/assets/controllers/application-368d98631bccbf2349e0d4f8269afb3fe9625118341966de054759d96ea86c7e.js",
+    "controllers/hello_controller": "./js/assets/controllers/hello_controller-549135e8e7c683a538c3d6d517339ba470fcfb79d62f738a0a089ba41851a554.js",
+    "controllers": "./js/assets/controllers/index-2db729dddcc5b979110e98de4b6720f83f91a123172e87281d5a58410fc43806.js"
+  }
+}</script>
+  <link rel="modulepreload"
+    href="./js/assets/application-f73e8855bcc363bfbab8f71452cac22eeb33717ac000963f65e88e23603a5e89.js">
+  <link rel="modulepreload"
+    href="./js/assets/turbo.min-f309baafa3ae5ad6ccee3e7362118b87678d792db8e8ab466c4fa284dd3a4700.js">
+  <link rel="modulepreload"
+    href="./js/assets/stimulus.min-d03cf1dff41d6c5698ec2c5d6a501615a7a33754dbeef8d1edd31c928d17c652.js">
+  <link rel="modulepreload"
+    href="./js/assets/stimulus-loading-1fc59770fb1654500044afd3f5f6d7d00800e5be36746d55b94a2963a7a228aa.js">
+  <script async="async"
+    src="./js/es-module-shims.min-4ca9b3dd5e434131e3bb4b0c1d7dff3bfd4035672a5086deec6f73979a49be73.js"
+    data-turbo-track="reload" type="text/javascript"></script>
+  <script type="module">import "application"</script>
+  <script async="" defer="" type="text/javascript">
+    window.onload = function () {
+      var head = document.getElementsByTagName('head')[0];
+
+      // Preconnect to Google Fonts
+      var preconnectGoogleFonts = document.createElement('link');
+      preconnectGoogleFonts.rel = 'preconnect';
+      preconnectGoogleFonts.href = 'https://fonts.googleapis.com';
+      head.appendChild(preconnectGoogleFonts);
+
+      var preconnectGoogleFontsStatic = document.createElement('link');
+      preconnectGoogleFontsStatic.rel = 'preconnect';
+      preconnectGoogleFontsStatic.href = 'https://fonts.gstatic.com';
+      preconnectGoogleFontsStatic.crossOrigin = true;
+      head.appendChild(preconnectGoogleFontsStatic);
+
+      // Load Google Fonts CSS
+      var link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap';
+      head.appendChild(link);
+    };
+  </script>
+
+  <script is:inline="" defer="" src="./js/cdn.min.js" type="text/javascript"></script>
+  <style type="text/css" abt="234"></style>
+  <script>//remove baidu search ad
+    var _countAA = 0
+    function doBBBd () { }
+    doBBBd()
+    document.addEventListener('keyup', function () { _countAA -= 10; doBBBd() }, false)
+    document.addEventListener('click', function () { _countAA -= 10; doBBBd() }, false)
+
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="true">
+  <link rel="stylesheet" href="./css/css2.css">
+</head>
+
+<body class="text-2xl lg:text-3xl text-slate-800" data-new-gr-c-s-check-loaded="14.1117.0" data-gr-ext-installed="">
+  <section class="glarity--summary">
+    <div id="glarity--page__summary" class="glarity--page__summary react-draggable"
+      style="transform: translate(0px, 0px);"><button type="button"
+        class="glarity---btn css-rrec9u glarity---btn-primary glarity---btn-sm glarity---btn-icon-only glarity--static glarity--page__summary--icon"><span
+          class="glarity---btn-icon"><img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAACXBIWXMAAAsTAAALEwEAmpwYAAAE9GlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNy4yLWMwMDAgNzkuMWI2NWE3OWI0LCAyMDIyLzA2LzEzLTIyOjAxOjAxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgMjMuNSAoTWFjaW50b3NoKSIgeG1wOkNyZWF0ZURhdGU9IjIwMjMtMDItMTBUMDk6MTI6MTgrMDg6MDAiIHhtcDpNb2RpZnlEYXRlPSIyMDIzLTAzLTEzVDE2OjA3OjQ3KzA4OjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDIzLTAzLTEzVDE2OjA3OjQ3KzA4OjAwIiBkYzpmb3JtYXQ9ImltYWdlL3BuZyIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo0NGRhNzgzNi02MjViLTQzNWQtOGIyYy1jYzVjOWE5MmZkMmQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NDRkYTc4MzYtNjI1Yi00MzVkLThiMmMtY2M1YzlhOTJmZDJkIiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9InhtcC5kaWQ6NDRkYTc4MzYtNjI1Yi00MzVkLThiMmMtY2M1YzlhOTJmZDJkIj4gPHhtcE1NOkhpc3Rvcnk+IDxyZGY6U2VxPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0iY3JlYXRlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDo0NGRhNzgzNi02MjViLTQzNWQtOGIyYy1jYzVjOWE5MmZkMmQiIHN0RXZ0OndoZW49IjIwMjMtMDItMTBUMDk6MTI6MTgrMDg6MDAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCAyMy41IChNYWNpbnRvc2gpIi8+IDwvcmRmOlNlcT4gPC94bXBNTTpIaXN0b3J5PiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsSCl1MAABF4SURBVHic7Z17lF1Vfcc/k2QmDwhJFHzQJcVJAoHwMBBKhQoUkdKiFUwgQlBTpbjsKlLQVXUVgdZHWxFQCLQWbTU8IkEIhkcQhZLlAwyPCDMxEEgKiUQsJWYmDybPX//43svcmdxzz9777HPPDXM+a501k8w5Z//OPb+7H7/XbjMzSoYuw4oWoKRYSgUY4pQKMMQpFWCIUyrAEKdUgCHOiKIFyJF2YF/gncBoYAIwHBgJTAE6KucZsA54GdgJ9AG/B9YDa4DNwK5mCt5M3ggKMAY4Ar3Uo4BDgT8EJkW6fy+wEngeWA08DSwFXuQNoBhte5ghaBgwGTgdveh3V34WwUbgSeBx4CXgHqQke9QHuicowCTgg8Ac4LBiRUmlF7gbeAL4IeoxWppWVYBO4Azg48DUYkUJZiNwL1KE22jRnqHVFGAKcAnwYWBswbLEpBe4FbgaeK5gWQbQKgrwLuDvgTOBUcWKkiuvAQuBq9D8oXCKVoAjgS8Cf4mWbUOFHcB9wJeBx4oUpCgFmAxcDszijbEUDWUHsAj4AlpqNp1mK8AwNMZfDuzdzIaBHmAtMvT0oUmZ0W8N3QfZFGLZD3zYDHwNuBINE02jmQowHc2GO3O6/yZkoFmF1uNPAq8Cr1R+un6ww4A3A+OB/SvHdOAAZHPI0+6wBpgN/CzHNgbQLAW4FH3rY3b3a4HFwCPAz9Gae2fE+yexD/CPwF8De+Vw/13ADcBngG053H8AeSvAROA/gRMi3W858F/A/ZXfm83RwDXAe5rQ1i9Rb7Aqz0byVIAPADejb0wWXgSuB+6iuDX0aODr6FvfzNVKLzAT+HFuLZhZHsd1ZrbdstFlZrNyks/nOMfM1mV8lixsM32euTxfHj3AzajrCmU58AnUBRbJJOArwNkFy1HlZuAjsW8aew0+H5lxQ3gGTRQXxBMnmPPQRCyGOfpZ5CncgpainwAOCZSprfIzHhG7k9sCu7gNeXZxnscoM7s98Dlq6TGzG8xsSkI711aeO4SbEu4ZdMS60fyAB9llZnPNrDPmA2U4TjCztQHPUcuvzexix2fqNLPrLWyuFO0LE+Mm8wIeYI2ZHRfrITIeI83sW5Zt0rrOzOYEtn+chSnehwLbi6oAnwkQ/F4z2zeG8BGOw8zsyYBnqNJnZleYlCiLHOPN7EHPtl8zs2MztptJAU4ws52eQn85q8CRjjYz+1zlQwzlETObGlGm4aau3Yc1ZjY6S7uhF+5vZi95CnthFkEjHoeY2aOestfSZ2afN7NhOcl3iac8C7O0F3rhEk8h/yqLkJGOUWb2T2a21VP2Wpaa2ZFNkPUiT7mCP9+Qi/7BU7jZocJFPM4xs994yl3LDtNzdzRRZp/hoMfMJoa043vBVJNp0pW5ET8Q36PTtCTr8pC3Hi9YcSuWezzk/E5IG76m4IeAP3U8dz5wrrdlandmopjBUchyuQ35+Bciv/9gJgIXI4vZuIxtfx9FJjc1SKOGvYAVwDsczt2KvK5LvVrw0JbzPbRxsWmmnUX7jzUZVpLYZGY3mtmkmmvmmrrDrPSY2bkZ5Y91nOUhd5fv/V1P7DB3j9gGy27du9Y023ah18xOMZlIYzDfAsfTHA8fY9tMn3u7nuizNMk6Xl7r0VaVrK5nM7P/MX3bin7Z9Y52M1vt+BxevYDLSSPN7BXHxrPaqN/n2E5MtpvZl0zLxKJfdKPjbI9nmuF6X5f6ABegNOs0fouSO0JpB76X4foQlqLM4i+iSOFWZgEKhXPhDNebuqwC1uA2Cz0f+I5rw3WYg+L9msHvUNDlLTm2MRYlvPwRsB+qN7AU5QFsCLzndNwSSXpRVHP6Ei+li5jh0e20Z+zifuDRViibzOxyMxuTUdZGx0FmtsAa+0kWWrgfwdWu4TQMpA0BZzloW5Wsa/6jM17fiI3Al4A/QCHdW3JqZzbKRziLxuV3zgCeAv4uoI1/dTxvmtNZDbSjw8w2O2qbmdlvzeztgVo9xeH+rpq/3vq/fSvN7FOW3V3rcpzrKN9gLvZsp83cbB3LXe7XaA5wHnCTo7ZVWYcyX+9G8ey1JVTaUI2e4Shk/Ag0Tv4FcJBnO41YUrl/B8oIagbHVtodGXCtIQueTzbQTbjFBk4gbb7RQDtuDdToWjaY2R1m9nSEe7nyTcvnG95m9V3AnRYe31flRU9ZZjreN9Wu0agH2EB2W3oRzCI8srgDZS6fipa+o9G3en/kAxmHIntvQRlCzyO/w9XZRAYUTX2b47nD0PtJi1ruRYWzErOLkhRgKtDtKEwr8X8oidPVeXMwGoLegV66TzmajcDJaCKXJQ+iyv3Ap3HPfroHFctK405gRtIfk/ICTnUUotX4Co1f/hg0A38/evFZerixwH8TLyH1NFSC7l7UE9yecv5PcVOAD6EV2q11/5owNlyZcUwrgiVW3wN5hCmEq7tAuYabbAM+rLDGqXGHeNwrcUWQtFbNmtDZbH6FSslVx7M/RuVXfoPW2/9McdXGJgOXoZWCD1NQPMKP0YppMCtQwqwLh6KYit1J0Iy7HbSq10MDQ3C1Qcw3s3Emy9c1Zva/OclTJH1mdpntbm0db2a/crzHFVbnXdebBLahGWZaL7AUTUQ+jZuzyIVXkEPoLlT04Xw0qz+ZgZa111BxiFeBNwHvc5A3L34HvLVJbT0BnMPAiWInsj6mzWd+TZ1esJ4CdKDwIhe6UWm3k5Ei+Hazm4CHgV8APyK5dNpYZCzaDzgFOBBNmvKo0OHDauRJzNOpNJhNKEv4rpr/uxotR9PYG9Ujep16CjAKvxi49ehDuAF9C/8Mea3egmbd7Whs3oIU61VUX/dx5GlMm0VPRTP2U9m9JyiSFWj5t4zsKfEhXADcWPl9BvADh2sOY1BllRgKUGU5KgeziPrBmmkMQwGd70cmzHcCJ+Lmis6TLrQ824GUtQcNf9+vOWc06mIPbLJsn0fOoQnoi5jG8ai3fZ2sQ0ASPWg9uwrNwmvXy22VNk5EhSJHoG/44RnbzMpzaMb9Iop+fgEZe1w/i2noOX1sC73IfzLF45rBzAMuQnscpLGbAtQzBG2vCJZlUjWOOCHhefI86q2eQMrak/F+y5DZ9SrcInLuQ/OmVSj0fSZyYo3xbPejqGKaC7ubfestDcxtGbgn0mVmn7Xkwg2xjrMt2fC03Mw+nHDdUQ2ua4RrKPxBg9tM8gX8O/BJT01sRar1+xcBD6BZsCGfQdZhzoUOtIIZVWnPdUg5G/gP4jrjtqK5woD5XdKMemPEhpvNT1DUz0y0Pv85cAUaI9ci6+AGlFk0B8Un5MU2tOp5CT+lW4CGk7sjyvII9Sb3DbqwPYXtpiHr42Y2wfqf4UxzC2d/3syOt2xdfl7HcDO7xf8jqYuzJRD0zXk5ovbFphcZju5C3fumQX+/Dvhbj/vtQN3uwhjC5cAC/OIz6zEdTXgHkKQArubgZlJ1ftyHurMkA1JogMZOFJSxjP5E1H1RvkAPmjv0oVXSOqQ0zaIdlZM/MPD6F5BdZTcaRQS51vxbhNaxMeP6QOvyn6Ax/H7c4vuORAUmQ2LzfNiM5hM9KCHmOeSR7EYGsTyKVs9ioPHJh8+i5eluNFKA2cjEmUYXclcejNaxhwPH4Vd3vxsZjNYiE/FDuBk2BnMn8k0UySb0LD+l388Ra1Ldjb+/pWGUVCMFGIGGAReHy9eBf2PgNmnjkfOmdtdO0LdjPepKN6AXHWNJ1omqjbba1jN9wINIqX9IturfIcPbRcC1iX9NmYX6FIDsMaVoOycmRjjaTDH/beZfXKkoui2sCHZIddFnLaWYVVpuYOi400O/AWYxu8/SQ2hHY/tpKLplIvDnyFjSW2kzzXG0GHWhB0SQJysrkX1ifsp501AegG/Xvxnta7Cs0UkuyaGryL7NSw+yxK1BxpGnUZLjLgY6iarbtbwHuZOrL/0k4uwaOgvtK/y1CPeKxTPAx0gu7dJF2LN/ElkTG+KiAOfT73cuyYc+FAl1IZobVZlJenRwPZxLy7sEV3wbd29TSRij0Dd2CRraqrwr4F5e+wq4RtdcFiBIiT/vRmFx0yv/9t3P4To8N5XwKRP3GP2CvZG5BK3fQfMTQy9iGPLu7YM8fBNRunknsrLF3E5uM5r3zEBRP2lsQka7e30b8lGA42nifnYFcR9u2Tb12Bt12X+CXt4JyAYSyiY0JLjIcziBqXy+hSJvRJPCVmUnMnxcif+HvwytPjannehIB/2RPqdX/p0X7QT6JnwVYBxatrwtpLGceRn593+ExtLFuAdUPIrsC1nDwpKYhIaW84izD9FghjOwFoMzviHWPSgGrVXoQmnas4G3o5cP8hYehQImG1X/6kV7Ep5Ifi8fFH/4NxWZ7ox87y4CXz6Ebxx5PXogH7IEmnYjQ8l65Ip9GIVhu/gQJqEM2cmV9q1yn1XIvZzrzpwJfBSYS5ze4EaUIxBEqAIMR67akzyu6UWeum7kYGpHPVC1F2pDY/hO9GL7kAdrMxk0vIWZhhQ5a8xFoqvXhSwbR7rmpNWyBXgvGnNL4ijBVNQbBpF159Cj0VLFJ0cvtWzJEOM0NGEN4QUSIn1cyZpn9wTK1/Opu7cPHqVMhwD3E2DAqZDq7EkjxtaxS5ESPIh7T1C1d09G1q5pKCVrIZrBZ2UCmmCNoD8bZitaKrbifGIe/gYowy0htCExN48+BimBy8z2GhS7921kQavlZRRH8ChyH29BHrJ2NFEci4w845FpehyqETC68vtEkuclG5Ed4/cor/8ppHDLKG5XEAjLx3wAZWJnIvbu4dNQ2FNaYMYNwKfQC20FtiJFeBAp39NNbn8k8rju53h+HypC3ZW14Ty2j38z0s6jEv6+GK0gDo7dcESeRanu3yJfAxHopS9CdY1cuQJlP2UnIDbN5Rhjqv69qyY+bZdp65O3esa1FckWk8yTLZ/P6Rjz3zd4tUXc3CKPHqCWiWjGb8jqthr3YgatxHYUsfM54sl+AfAN/JxWTnF+PuStAEmsIFtRhKLoQQGaF2a8zzw8AzeQt+9MVJgrGkXV29lTI4zGoZzD5STPcdLwCtmqYQ6RXz4UpwC341+KvpU4FJlwT/S8bi7+xaR2IYXJpRJZUUNAlRlojvBB8vGT581OlBHlMiScglZHPkvfPhRDcIe/aG4UrQBVOpESvAktD0/F3cnUhdbwvWiyVo3jg4E1cdoqxwg0OfVpI415KLY/ib2Q78OnoGQP8hPk6jhrFQWoxwhkIRte+bmt8v87ag5w2RkrmXbkTTsdfdOyTEy/APxLwt8uRXsWufIYCvJcnXZiVlpZAYpgOtpOziUtvh4XonG+lmHI7OxaTnc+2rC6KfsYtkrVzVbhcVSL92BknfPlOlRppJZjcH/5l6Lyek3bxLJUgPqsRHOSWfibgr/LwC3wTna87nK04UVTKRWgMdVqXb/0uGY0CvwcX/n3IQ7XrKSAlw+lAriwGiV5+CzFDkBmXpBzLI2HyaesTCqlArixDSV4+OxG9jE0jLgkhMRKRvGmVAA/fLek+x4D072TyFp/IZhSAfyZhfsKYRwaPtIorBxfqQBhXIz76sAlTvItGWTJRKkAYaxGO4nGqH0ECqErJDyuVIBwlhErLEtDQCHDQGkKzs5z+BXFTOJtyGTcVMoeIDsuFTxcKKTAZakA2bmDOBttl4agPRgfV28SLvaC6JRzgHhsIDzAZCPyHTQ9ba3sAeKRJcbxGQrKWSwVIB7fyHDtY7GE8KVUgHisIjxXb0lMQXwoFSAuXw24pg/VJyyEUgHicid+xTKg/qZXTaNUgLhsQynmPiRFEjeFUgHi84v0U17nDiImeoZQKkB8HvI4N223kNwpDUHx6UBGobS077RsoqZQ9gDx2UZ62NgDtMDLh7IHyItRqBTOSXX+9hQKJgnZFzE6pQLkRwcqXX8G2kegGynFVbTQ7uylAgxxyjnAEKdUgCFOqQBDnFIBhjilAgxx/h82KO7pEB13CAAAAABJRU5ErkJggg=="
+            alt="Glarity Summary"></span></button></div>
+  </section>
+  <turbo-cable-stream-source channel="Turbo::StreamsChannel"
+    signed-stream-name="ImlmcmFtZV9pbmRleCI=--d5187adae8222d0990630810547cd2f1cdc28c92c200efd8ad34c5da24dd731f"
+    connected=""></turbo-cable-stream-source>
+  <div id="iframe_49456_index"
+    class="bg-white text-lg md:text-xl font-custom justify-between text-slate-800 w-full relative flex flex-col min-h-screen">
+    <div class="isolate relative">
+      <div class="absolute z-[999] top-6 right-4">
+        <form class="" action="https://gla.edu.kg/lp/" accept-charset="UTF-8"
+          method="post"><input type="hidden" name="_method" value="patch" autocomplete="off"><input type="hidden"
+            name="authenticity_token"
+            value="YI7rLLP5oeqZySF-U1CaFsuPdmhmKFNE6H68CvsMGPAaZ-RawnR0BhalpIPhCR9ODHI6JbWpH2rL9sN4VBoW9w"
+            autocomplete="off">
+          <div x-data="{
+            open: false,
+            toggle() {
+                if (this.open) {
+                    return this.close()
+                }
+                this.$refs.button.focus()
+                this.open = true
+            },
+            close(focusAfter) {
+                if (! this.open) return
+                this.open = false
+                focusAfter &amp;&amp; focusAfter.focus()
+            }
+        }" x-on:keydown.escape.prevent.stop="close($refs.button)"
+            x-on:focusin.window="! $refs.panel.contains($event.target) &amp;&amp; close()"
+            x-id="[&#39;dropdown-button&#39;]" class="inline-flex relative gap-2">
+            <button x-ref="button" style="display: none;" x-on:click="toggle()" :aria-expanded="open"
+              :aria-controls="$id(&#39;dropdown-button&#39;)" type="button"
+              class="flex items-center gap-2 hover:bg-slate-700 bg-slate-800/90 text-white px-4 py-2.5 rounded-full text-sm shadow"
+              aria-expanded="false" aria-controls="dropdown-button-1">
+              Change Layout
+              <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                aria-hidden="true">
+                <path fill-rule="evenodd"
+                  d="M11.47 4.72a.75.75 0 011.06 0l3.75 3.75a.75.75 0 01-1.06 1.06L12 6.31 8.78 9.53a.75.75 0 01-1.06-1.06l3.75-3.75zm-3.75 9.75a.75.75 0 011.06 0L12 17.69l3.22-3.22a.75.75 0 111.06 1.06l-3.75 3.75a.75.75 0 01-1.06 0l-3.75-3.75a.75.75 0 010-1.06z"
+                  clip-rule="evenodd"></path>
+              </svg>
+            </button>
+            <div x-ref="panel" x-show="open" x-transition.origin.top.right="" x-on:click.outside="close($refs.button)"
+              :id="$id(&#39;dropdown-button&#39;)" style="display: none;"
+              class="absolute right-0 top-12 w-24 rounded-lg bg-slate-800/90 backdrop-blur-lg text-white shadow-md"
+              id="dropdown-button-1">
+              <input onchange="if (!window.__cfRLUnblockHandlers) return false; this.form.submit()" id="hero01"
+                name="hero_sections" checked="" value="hero01" type="radio" class="peer hidden">
+              <label for="hero01"
+                class="flex items-center gap-2 w-full first-of-type:rounded-t-lg last-of-type:rounded-b-lg px-4 py-2.5 text-left opacity-20 text-base hover:bg-slate-600 disabled:text-slate-400">
+                <img
+                  srcset="/assets/hero_sections/hero01@2x-d9ff1574fecb78f1b470cd80e768cba585aa3eb4137e7b5cf403373803b26c7f.png 2x"
+                  alt="" class="mx-auto" loading="lazy"
+                  src="./img/hero01-3f2ced86785d703e04f434d062ce339a4169542c73b01d5acfd558d23788020f.png">
+              </label>
+              <input onchange="if (!window.__cfRLUnblockHandlers) return false; this.form.submit()" id="hero02"
+                name="hero_sections" value="hero02" type="radio" class="peer hidden">
+              <label for="hero02"
+                class="flex items-center gap-2 w-full first-of-type:rounded-t-lg last-of-type:rounded-b-lg px-4 py-2.5 text-left  text-base hover:bg-slate-600 disabled:text-slate-400">
+                <img
+                  srcset="/assets/hero_sections/hero02@2x-6cc2cbdef4fdfd2a2dee33776806a12dd22e706bea34dfe0edeea6a0fa4137c5.png 2x"
+                  alt="" class="mx-auto" loading="lazy"
+                  src="./img/hero02-9f398162ce80145ccebeabf10614bc7c413960024e54ff3e6f76ce53cb9ea65f.png">
+              </label>
+              <input onchange="if (!window.__cfRLUnblockHandlers) return false; this.form.submit()" id="hero03"
+                name="hero_sections" value="hero03" type="radio" class="peer hidden">
+              <label for="hero03"
+                class="flex items-center gap-2 w-full first-of-type:rounded-t-lg last-of-type:rounded-b-lg px-4 py-2.5 text-left  text-base hover:bg-slate-600 disabled:text-slate-400">
+                <img
+                  srcset="/assets/hero_sections/hero03@2x-245dc2a2c2d28eca81682aa130618da790574eb3f122fb3e173e18af56b2c858.png 2x"
+                  alt="" class="mx-auto" loading="lazy"
+                  src="./img/hero03-ecb51ad7a90547eccc0b9cbb3d7f361640835ddcb781ae7f4bf060e5d415d2b7.png">
+              </label>
+              <input onchange="if (!window.__cfRLUnblockHandlers) return false; this.form.submit()" id="hero04"
+                name="hero_sections" value="hero04" type="radio" class="peer hidden">
+              <label for="hero04"
+                class="flex items-center gap-2 w-full first-of-type:rounded-t-lg last-of-type:rounded-b-lg px-4 py-2.5 text-left  text-base hover:bg-slate-600 disabled:text-slate-400">
+                <img
+                  srcset="/assets/hero_sections/hero04@2x-047ff70f17d45641077ae973fcf03ebd0a8eeb88c64a50c8e96de6562b5957cc.png 2x"
+                  alt="" class="mx-auto" loading="lazy"
+                  src="./img/hero04-8c119e08946e8095639373f111aff84a7b12a72c447294a5896b24597e6c12cb.png">
+              </label>
+              <input onchange="if (!window.__cfRLUnblockHandlers) return false; this.form.submit()" id="hero05"
+                name="hero_sections" value="hero05" type="radio" class="peer hidden">
+              <label for="hero05"
+                class="flex items-center gap-2 w-full first-of-type:rounded-t-lg last-of-type:rounded-b-lg px-4 py-2.5 text-left  text-base hover:bg-slate-600 disabled:text-slate-400">
+                <img
+                  srcset="/assets/hero_sections/hero05@2x-ad4f1a45ca02fcf9659f2f601c3c9eba191758268a3073fa22e58c58429be8e1.png 2x"
+                  alt="" class="mx-auto" loading="lazy"
+                  src="./img/hero05-a73bbd2dd4ae029d8131062d664d58ee59a175fad08875de3927b295071c242a.png">
+              </label>
+              <input onchange="if (!window.__cfRLUnblockHandlers) return false; this.form.submit()" id="hero06"
+                name="hero_sections" value="hero06" type="radio" class="peer hidden">
+              <label for="hero06"
+                class="flex items-center gap-2 w-full first-of-type:rounded-t-lg last-of-type:rounded-b-lg px-4 py-2.5 text-left  text-base hover:bg-slate-600 disabled:text-slate-400">
+                <img
+                  srcset="/assets/hero_sections/hero06@2x-44d33fcbc50b8ee0323ec338f43344f7e8adbf8b00ed0610761639e18dd0b333.png 2x"
+                  alt="" class="mx-auto" loading="lazy"
+                  src="./img/hero06-3442bd89b04cb3c8eb02605037bae771888acec8e07f0069cd9a3ebbfdf98590.png">
+              </label>
+            </div>
+          </div>
+        </form>
+      </div>
+      <section class="pb-8 md:pb-32 px-5 z-50 bg-slate-900 overflow-hidden relative text-white"
+        style="background-color: #22c55e ">
+        <nav class="py-8 max-w-7xl mx-auto flex flex-col sm:flex-row w-full justify-between">
+          <div class="flex gap-2 items-center">
+            <a href="" class="font-semibold text-2xl">AI Learning Group</a>
+          </div>
+          <div class="flex text-base font-medium gap-8">
+            <a class="hover:opacity-80" href="./#features">Features</a>
+            <a class="hover:opacity-80" href="./#faq">FAQ</a>
+          </div>
+        </nav>
+        <div
+          class="[&amp;&gt;*]:mb-12 [&amp;&gt;*]:-z-10 [&amp;&gt;*]:absolute [&amp;&gt;*]:right-0 [&amp;&gt;*]:top-0 [&amp;&gt;*]:mx-auto [&amp;&gt;*]:text-white [&amp;&gt;*]:md:h-[120%] [&amp;&gt;*]:mix-blend-plus-lighter [&amp;&gt;*]:opacity-30">
+          <svg class="" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_1124_1291)">
+              <mask id="mask0_1124_1291" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="200"
+                height="200">
+                <path d="M200 0H0V200H200V0Z" fill="white"></path>
+              </mask>
+              <g mask="url(#mask0_1124_1291)">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M200 2.62268e-06V60V200H140V130.033C139.982 168.678 108.649 200 70 200C31.3401 200 0 168.66 0 130C0 91.3401 31.3401 60 70 60C108.649 60 139.982 91.3222 140 129.967V60H70H0V2.62268e-06L140 0L200 2.62268e-06Z"
+                  fill="url(#paint0_linear_1124_1291)"></path>
+              </g>
+            </g>
+            <defs>
+              <lineargradient id="paint0_linear_1124_1291" x1="157.5" y1="32" x2="44" y2="147.5"
+                gradientUnits="userSpaceOnUse">
+                <stop offset="0.0509862" stop-color="rgba(34, 173, 197, 0.2)"></stop>
+                <stop offset="1" stop-color="rgba(56, 197, 34, 0.2)"></stop>
+              </lineargradient>
+              <clippath id="clip0_1124_1291">
+                <rect width="200" height="200" fill="white"></rect>
+              </clippath>
+            </defs>
+          </svg>
+        </div>
+        <div class="flex flex-col max-w-7xl py-12 pt-32  mx-auto">
+          <div x-on:click="toggle(&#39;hero&#39;)">
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl max-w-5xl font-custom font-bold">
+              AI Learning Group
+            </h1>
+          </div>
+          <div>
+            <div x-on:click="toggle(&#39;hero&#39;)">
+              <p class="sm:leading-relaxed max-w-2xl text-2xl mt-8">
+                Unlock the power of AI with our comprehensive courses and training programs.
+              </p>
+            </div>
+            <div class="mt-12 max-w-lg" x-on:click="toggle(&#39;cta&#39;)">
+              <section class="relative">
+                <h2 class="mb-3 text-2xl sm:text-2xl font-custom font-bold max-w-4xl md:leading-tight">
+                  Get notified about updates.
+                </h2>
+                <div class="">
+                  <form class="flex flex-col sm:flex-row gap-y-2 sm:gap-y-2 max-w-2xl gap-x-2 items-center flex-wrap"
+                    action="https://gla.edu.kg/subscribe" accept-charset="UTF-8" method="post">
+                    <input type="hidden" name="authenticity_token"
+                      value="d6Wek6C4KNj0WAqNzKSdci7t4Z1RpAGKqZxdn_l7kQEiYprhmEsjIxzEjEAyJ9tILlBYE49jpK38Y7h-JM1dBg"
+                      autocomplete="off">
+                    <input type="hidden" name="iframe_id" id="iframe_id" value="gla"
+                      autocomplete="off">
+                    <label class="sr-only" for="email">Email address</label>
+                    <input autocomplete="email" required="required"
+                      class="flex-auto rounded-lg border-0 bg-white px-6 py-3.5 shadow-sm ring-1 ring-black/10 focus:ring-2 w-full focus:ring-black/10 text-slate-900 text-base sm:text-xl sm:leading-6"
+                      placeholder="Enter your email." type="email" name="email" id="email">
+                    <input type="submit" name="commit" value="Notify me."
+                      class="rounded-lg py-4 whitespace-nowrap px-6 sm:px-12 text-base font-bold sm:text-xl text-white shadow-sm hover:opacity-90 transition focus-visible:outline focus-visible:outline-2 w-full focus-visible:outline-offset-2 focus-visible:outline-white"
+                      style="background-color: #1a9949" data-disable-with="Notify me.">
+                  </form>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="isolate relative">
+      <div class="absolute z-[999] top-6 right-4">
+        <form class="" action="https://gla.edu.kg/lp/gla" accept-charset="UTF-8"
+          method="post"><input type="hidden" name="_method" value="patch" autocomplete="off"><input type="hidden"
+            name="authenticity_token"
+            value="DfQyDqmUAKijEUNslQLMckQlGCE2OpgQ0YttGRO9Jip3HT142BnVRCx9xpEnW0kqg9hUbOW71D7yAxJrvKsoLQ"
+            autocomplete="off">
+          <div x-data="{
+            open: false,
+            toggle() {
+                if (this.open) {
+                    return this.close()
+                }
+                this.$refs.button.focus()
+                this.open = true
+            },
+            close(focusAfter) {
+                if (! this.open) return
+                this.open = false
+                focusAfter &amp;&amp; focusAfter.focus()
+            }
+        }" x-on:keydown.escape.prevent.stop="close($refs.button)"
+            x-on:focusin.window="! $refs.panel.contains($event.target) &amp;&amp; close()"
+            x-id="[&#39;dropdown-button&#39;]" class="inline-flex relative gap-2">
+            <button x-ref="button" style="display: none;" x-on:click="toggle()" :aria-expanded="open"
+              :aria-controls="$id(&#39;dropdown-button&#39;)" type="button"
+              class="flex text-sm items-center gap-2 hover:bg-slate-700 bg-slate-800/90 text-white px-4 py-2.5 rounded-full shadow"
+              aria-expanded="false" aria-controls="dropdown-button-2">
+              Change Layout
+              <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                aria-hidden="true">
+                <path fill-rule="evenodd"
+                  d="M11.47 4.72a.75.75 0 011.06 0l3.75 3.75a.75.75 0 01-1.06 1.06L12 6.31 8.78 9.53a.75.75 0 01-1.06-1.06l3.75-3.75zm-3.75 9.75a.75.75 0 011.06 0L12 17.69l3.22-3.22a.75.75 0 111.06 1.06l-3.75 3.75a.75.75 0 01-1.06 0l-3.75-3.75a.75.75 0 010-1.06z"
+                  clip-rule="evenodd"></path>
+              </svg>
+            </button>
+            <div x-ref="panel" x-show="open" x-transition.origin.top.right="" x-on:click.outside="close($refs.button)"
+              :id="$id(&#39;dropdown-button&#39;)" style="display: none;"
+              class="absolute right-0 top-12 w-24 rounded-lg bg-slate-800/90 backdrop-blur-lg text-white shadow-md"
+              id="dropdown-button-2">
+              <input onchange="if (!window.__cfRLUnblockHandlers) return false; this.form.submit()" id="feature01"
+                name="feature_sections" checked="" value="feature01" type="radio" class="peer hidden">
+              <label for="feature01"
+                class="flex items-center gap-2 w-full first-of-type:rounded-t-lg last-of-type:rounded-b-lg px-4 py-2.5 text-left opacity-20 text-base hover:bg-slate-600 disabled:text-slate-400">
+                <img
+                  srcset="/assets/feature_sections/feature01@2x-863a6a14bc92b218311aaf528feaa9a208ba47b0182361581bd29ea400811e39.png 2x"
+                  alt="" class="mx-auto" loading="lazy"
+                  src="./img/feature01-b3c1412177e3108518cca8413b6ad380ad66990ac4fb564f205570f5b4d0861e.png">
+              </label>
+              <input onchange="if (!window.__cfRLUnblockHandlers) return false; this.form.submit()" id="feature02"
+                name="feature_sections" value="feature02" type="radio" class="peer hidden">
+              <label for="feature02"
+                class="flex items-center gap-2 w-full first-of-type:rounded-t-lg last-of-type:rounded-b-lg px-4 py-2.5 text-left  text-base hover:bg-slate-600 disabled:text-slate-400">
+                <img
+                  srcset="/assets/feature_sections/feature02@2x-fbcf846cfef77ab8bfcf152b843f4d500f1a56e70004b417fc6f9ff552835db3.png 2x"
+                  alt="" class="mx-auto" loading="lazy"
+                  src="./img/feature02-ee273ab3bdaa71c660314dd7b30210b8f889ea1f658bebf464a77f6eb8bd2063.png">
+              </label>
+              <input onchange="if (!window.__cfRLUnblockHandlers) return false; this.form.submit()" id="feature03"
+                name="feature_sections" value="feature03" type="radio" class="peer hidden">
+              <label for="feature03"
+                class="flex items-center gap-2 w-full first-of-type:rounded-t-lg last-of-type:rounded-b-lg px-4 py-2.5 text-left  text-base hover:bg-slate-600 disabled:text-slate-400">
+                <img
+                  srcset="/assets/feature_sections/feature03@2x-b40e6aaba41117315122de5eef6858a6f468ffa826e71a64784bac07bf51a36c.png 2x"
+                  alt="" class="mx-auto" loading="lazy"
+                  src="./img/feature03-feea9de88185a2eab3c68e50b1fb1cae7940c470634a1ed780a2662ba891d2a2.png">
+              </label>
+              <input onchange="if (!window.__cfRLUnblockHandlers) return false; this.form.submit()" id="feature04"
+                name="feature_sections" value="feature04" type="radio" class="peer hidden">
+              <label for="feature04"
+                class="flex items-center gap-2 w-full first-of-type:rounded-t-lg last-of-type:rounded-b-lg px-4 py-2.5 text-left  text-base hover:bg-slate-600 disabled:text-slate-400">
+                <img
+                  srcset="/assets/feature_sections/feature04@2x-8922b820169681a5488ae5869e87c4a24c908d021fd4669d294e3023299d7399.png 2x"
+                  alt="" class="mx-auto" loading="lazy"
+                  src="./img/feature04-8220b924b078f6989900ed97a9fd0bfe02670a91c5091c148783337bc1154caf.png">
+              </label>
+            </div>
+          </div>
+        </form>
+      </div>
+      <section id="features" class="px-5 relative py-20 sm:py-32">
+        <div class="max-w-7xl mx-auto">
+          <div class="mb-20 text-center">
+            <h2 class="text-4xl md:text-6xl max-w-2xl mx-auto font-custom font-bold md:leading-tight">
+              Explore Our Features
+            </h2>
+            <p class="sm:leading-relaxed text-2xl max-w-2xl mx-auto">
+              Why Choose AI Learning Group?
+            </p>
+          </div>
+          <div class="flex flex-col gap-28 mb-28">
+            <div
+              class="rounded-xl text-center lg:text-left items-center flex flex-col lg:flex-row gap-4 md:gap-12 lg:gap-20">
+              <div class="flex relative justify-center order-first">
+                <div class="group">
+                  <div class="flex justify-between absolute w-full top-1 px-1">
+                    <div
+                      class="inline-flex opacity-0 group-hover:opacity-100 group-hover:origin-left group-hover:scale-100 scale-0 transition gap-3 items-center pl-3 pr-1 py-1 bg-black/60 text-base ring-1 ring-slate-300/10 backdrop-blur-lg rounded-lg text-white">
+                      <span class="text-sm">Change</span>
+                      <div class="flex gap-1">
+                        <a class="bg-teal-50 text-teal-600 hover:text-teal-700 hover:bg-teal-100 p-1.5 rounded-md transition"
+                          href="https://gla.edu.kg/features/296140/update_image">
+                          <span class="sr-only">Image from Unsplash</span>
+                          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M15 3H9V8H15V3ZM8 11H3V21H8H16H21V11H16V16H8V11Z" fill="currentColor"></path>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                    <div>
+                      <a class="bg-black/50 opacity-0 group-hover:opacity-100 group-hover:origin-right group-hover:scale-100 scale-0 transition  inline-flex items-center justify-center text-white backdrop-blur-lg p-1.5 hover:bg-rose-500 rounded-md"
+                        rel="nofollow" data-method="delete"
+                        href="https://gla.edu.kg/features/296140/destroy_image_unsplash">
+                        <span class="sr-only">Delete Image</span>
+                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                          aria-hidden="true">
+                          <path fill-rule="evenodd"
+                            d="M16.5 4.478v.227a48.816 48.816 0 013.878.512.75.75 0 11-.256 1.478l-.209-.035-1.005 13.07a3 3 0 01-2.991 2.77H8.084a3 3 0 01-2.991-2.77L4.087 6.66l-.209.035a.75.75 0 01-.256-1.478A48.567 48.567 0 017.5 4.705v-.227c0-1.564 1.213-2.9 2.816-2.951a52.662 52.662 0 013.369 0c1.603.051 2.815 1.387 2.815 2.951zm-6.136-1.452a51.196 51.196 0 013.273 0C14.39 3.05 15 3.684 15 4.478v.113a49.488 49.488 0 00-6 0v-.113c0-.794.609-1.428 1.364-1.452zm-.355 5.945a.75.75 0 10-1.5.058l.347 9a.75.75 0 101.499-.058l-.346-9zm5.48.058a.75.75 0 10-1.498-.058l-.347 9a.75.75 0 001.5.058l.345-9z"
+                            clip-rule="evenodd"></path>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <img loading="lazy" src="./img/photo-1646386108021-c44d9d1c07e6.jpg" alt="Comprehensive Curriculum"
+                    class="w-full max-w-2xl object-cover rounded-xl">
+                </div>
+              </div>
+              <div x-on:click="toggle(&#39;features&#39;)">
+                <h3 class="text-2xl md:text-4xl sm:mb-4 font-semibold">
+                  Comprehensive Curriculum
+                </h3>
+                <p class="sm:leading-relaxed mt-2 sm:mt-4 opacity-70 max-w-2xl">Our courses cover all aspects of AI
+                  technology, from the basics to advanced concepts.</p>
+              </div>
+            </div>
+            <div
+              class="rounded-xl text-center lg:text-left items-center flex flex-col lg:flex-row gap-4 md:gap-12 lg:gap-20">
+              <div class="flex relative justify-center lg:order-last">
+                <div class="group">
+                  <div class="flex justify-between absolute w-full top-1 px-1">
+                    <div
+                      class="inline-flex opacity-0 group-hover:opacity-100 group-hover:origin-left group-hover:scale-100 scale-0 transition gap-3 items-center pl-3 pr-1 py-1 bg-black/60 text-base ring-1 ring-slate-300/10 backdrop-blur-lg rounded-lg text-white">
+                      <span class="text-sm">Change</span>
+                      <div class="flex gap-1">
+                        <a class="bg-teal-50 text-teal-600 hover:text-teal-700 hover:bg-teal-100 p-1.5 rounded-md transition"
+                          href="https://gla.edu.kg/features/296141/update_image">
+                          <span class="sr-only">Image from Unsplash</span>
+                          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M15 3H9V8H15V3ZM8 11H3V21H8H16H21V11H16V16H8V11Z" fill="currentColor"></path>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                    <div>
+                      <a class="bg-black/50 opacity-0 group-hover:opacity-100 group-hover:origin-right group-hover:scale-100 scale-0 transition  inline-flex items-center justify-center text-white backdrop-blur-lg p-1.5 hover:bg-rose-500 rounded-md"
+                        rel="nofollow" data-method="delete"
+                        href="https://gla.edu.kg/features/296141/destroy_image_unsplash">
+                        <span class="sr-only">Delete Image</span>
+                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                          aria-hidden="true">
+                          <path fill-rule="evenodd"
+                            d="M16.5 4.478v.227a48.816 48.816 0 013.878.512.75.75 0 11-.256 1.478l-.209-.035-1.005 13.07a3 3 0 01-2.991 2.77H8.084a3 3 0 01-2.991-2.77L4.087 6.66l-.209.035a.75.75 0 01-.256-1.478A48.567 48.567 0 017.5 4.705v-.227c0-1.564 1.213-2.9 2.816-2.951a52.662 52.662 0 013.369 0c1.603.051 2.815 1.387 2.815 2.951zm-6.136-1.452a51.196 51.196 0 013.273 0C14.39 3.05 15 3.684 15 4.478v.113a49.488 49.488 0 00-6 0v-.113c0-.794.609-1.428 1.364-1.452zm-.355 5.945a.75.75 0 10-1.5.058l.347 9a.75.75 0 101.499-.058l-.346-9zm5.48.058a.75.75 0 10-1.498-.058l-.347 9a.75.75 0 001.5.058l.345-9z"
+                            clip-rule="evenodd"></path>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <img loading="lazy" src="./img/photo-1461709444300-a6217cec3dff.jpg" alt="Hands-on Projects"
+                    class="w-full max-w-2xl object-cover rounded-xl">
+                </div>
+              </div>
+              <div x-on:click="toggle(&#39;features&#39;)">
+                <h3 class="text-2xl md:text-4xl sm:mb-4 font-semibold">
+                  Hands-on Projects
+                </h3>
+                <p class="sm:leading-relaxed mt-2 sm:mt-4 opacity-70 max-w-2xl">Get practical experience by working on
+                  real-world AI projects under the guidance of industry experts.</p>
+              </div>
+            </div>
+            <div
+              class="rounded-xl text-center lg:text-left items-center flex flex-col lg:flex-row gap-4 md:gap-12 lg:gap-20">
+              <div class="flex relative justify-center order-first">
+                <div class="group">
+                  <div class="flex justify-between absolute w-full top-1 px-1">
+                    <div
+                      class="inline-flex opacity-0 group-hover:opacity-100 group-hover:origin-left group-hover:scale-100 scale-0 transition gap-3 items-center pl-3 pr-1 py-1 bg-black/60 text-base ring-1 ring-slate-300/10 backdrop-blur-lg rounded-lg text-white">
+                      <span class="text-sm">Change</span>
+                      <div class="flex gap-1">
+                        <a class="bg-teal-50 text-teal-600 hover:text-teal-700 hover:bg-teal-100 p-1.5 rounded-md transition"
+                          href="https://gla.edu.kg/features/296142/update_image">
+                          <span class="sr-only">Image from Unsplash</span>
+                          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M15 3H9V8H15V3ZM8 11H3V21H8H16H21V11H16V16H8V11Z" fill="currentColor"></path>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                    <div>
+                      <a class="bg-black/50 opacity-0 group-hover:opacity-100 group-hover:origin-right group-hover:scale-100 scale-0 transition  inline-flex items-center justify-center text-white backdrop-blur-lg p-1.5 hover:bg-rose-500 rounded-md"
+                        rel="nofollow" data-method="delete"
+                        href="https://gla.edu.kg/features/296142/destroy_image_unsplash">
+                        <span class="sr-only">Delete Image</span>
+                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                          aria-hidden="true">
+                          <path fill-rule="evenodd"
+                            d="M16.5 4.478v.227a48.816 48.816 0 013.878.512.75.75 0 11-.256 1.478l-.209-.035-1.005 13.07a3 3 0 01-2.991 2.77H8.084a3 3 0 01-2.991-2.77L4.087 6.66l-.209.035a.75.75 0 01-.256-1.478A48.567 48.567 0 017.5 4.705v-.227c0-1.564 1.213-2.9 2.816-2.951a52.662 52.662 0 013.369 0c1.603.051 2.815 1.387 2.815 2.951zm-6.136-1.452a51.196 51.196 0 013.273 0C14.39 3.05 15 3.684 15 4.478v.113a49.488 49.488 0 00-6 0v-.113c0-.794.609-1.428 1.364-1.452zm-.355 5.945a.75.75 0 10-1.5.058l.347 9a.75.75 0 101.499-.058l-.346-9zm5.48.058a.75.75 0 10-1.498-.058l-.347 9a.75.75 0 001.5.058l.345-9z"
+                            clip-rule="evenodd"></path>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <img loading="lazy" src="./img/photo-1681327503762-4fc920b2df16.jpg" alt="Expert Instructors"
+                    class="w-full max-w-2xl object-cover rounded-xl">
+                </div>
+              </div>
+              <div x-on:click="toggle(&#39;features&#39;)">
+                <h3 class="text-2xl md:text-4xl sm:mb-4 font-semibold">
+                  Expert Instructors
+                </h3>
+                <p class="sm:leading-relaxed mt-2 sm:mt-4 opacity-70 max-w-2xl">Learn from experienced professionals who
+                  have deep knowledge and expertise in AI technology.</p>
+              </div>
+            </div>
+            <div
+              class="rounded-xl text-center lg:text-left items-center flex flex-col lg:flex-row gap-4 md:gap-12 lg:gap-20">
+              <div class="flex relative justify-center lg:order-last">
+                <div class="group">
+                  <div class="flex justify-between absolute w-full top-1 px-1">
+                    <div
+                      class="inline-flex opacity-0 group-hover:opacity-100 group-hover:origin-left group-hover:scale-100 scale-0 transition gap-3 items-center pl-3 pr-1 py-1 bg-black/60 text-base ring-1 ring-slate-300/10 backdrop-blur-lg rounded-lg text-white">
+                      <span class="text-sm">Change</span>
+                      <div class="flex gap-1">
+                        <a class="bg-teal-50 text-teal-600 hover:text-teal-700 hover:bg-teal-100 p-1.5 rounded-md transition"
+                          href="https://gla.edu.kg/features/296143/update_image">
+                          <span class="sr-only">Image from Unsplash</span>
+                          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M15 3H9V8H15V3ZM8 11H3V21H8H16H21V11H16V16H8V11Z" fill="currentColor"></path>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                    <div>
+                      <a class="bg-black/50 opacity-0 group-hover:opacity-100 group-hover:origin-right group-hover:scale-100 scale-0 transition  inline-flex items-center justify-center text-white backdrop-blur-lg p-1.5 hover:bg-rose-500 rounded-md"
+                        rel="nofollow" data-method="delete"
+                        href="https://gla.edu.kg/features/296143/destroy_image_unsplash">
+                        <span class="sr-only">Delete Image</span>
+                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                          aria-hidden="true">
+                          <path fill-rule="evenodd"
+                            d="M16.5 4.478v.227a48.816 48.816 0 013.878.512.75.75 0 11-.256 1.478l-.209-.035-1.005 13.07a3 3 0 01-2.991 2.77H8.084a3 3 0 01-2.991-2.77L4.087 6.66l-.209.035a.75.75 0 01-.256-1.478A48.567 48.567 0 017.5 4.705v-.227c0-1.564 1.213-2.9 2.816-2.951a52.662 52.662 0 013.369 0c1.603.051 2.815 1.387 2.815 2.951zm-6.136-1.452a51.196 51.196 0 013.273 0C14.39 3.05 15 3.684 15 4.478v.113a49.488 49.488 0 00-6 0v-.113c0-.794.609-1.428 1.364-1.452zm-.355 5.945a.75.75 0 10-1.5.058l.347 9a.75.75 0 101.499-.058l-.346-9zm5.48.058a.75.75 0 10-1.498-.058l-.347 9a.75.75 0 001.5.058l.345-9z"
+                            clip-rule="evenodd"></path>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <img loading="lazy" src="./img/photo-1454165804606-c3d57bc86b40.jpg" alt="Flexible Learning Options"
+                    class="w-full max-w-2xl object-cover rounded-xl">
+                </div>
+              </div>
+              <div x-on:click="toggle(&#39;features&#39;)">
+                <h3 class="text-2xl md:text-4xl sm:mb-4 font-semibold">
+                  Flexible Learning Options
+                </h3>
+                <p class="sm:leading-relaxed mt-2 sm:mt-4 opacity-70 max-w-2xl">Choose from online or in-person classes,
+                  and study at your own pace with our self-paced courses.</p>
+              </div>
+            </div>
+            <div
+              class="rounded-xl text-center lg:text-left items-center flex flex-col lg:flex-row gap-4 md:gap-12 lg:gap-20">
+              <div class="flex relative justify-center order-first">
+                <div class="group">
+                  <div class="flex justify-between absolute w-full top-1 px-1">
+                    <div
+                      class="inline-flex opacity-0 group-hover:opacity-100 group-hover:origin-left group-hover:scale-100 scale-0 transition gap-3 items-center pl-3 pr-1 py-1 bg-black/60 text-base ring-1 ring-slate-300/10 backdrop-blur-lg rounded-lg text-white">
+                      <span class="text-sm">Change</span>
+                      <div class="flex gap-1">
+                        <a class="bg-teal-50 text-teal-600 hover:text-teal-700 hover:bg-teal-100 p-1.5 rounded-md transition"
+                          href="https://gla.edu.kg/features/296144/update_image">
+                          <span class="sr-only">Image from Unsplash</span>
+                          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M15 3H9V8H15V3ZM8 11H3V21H8H16H21V11H16V16H8V11Z" fill="currentColor"></path>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                    <div>
+                      <a class="bg-black/50 opacity-0 group-hover:opacity-100 group-hover:origin-right group-hover:scale-100 scale-0 transition  inline-flex items-center justify-center text-white backdrop-blur-lg p-1.5 hover:bg-rose-500 rounded-md"
+                        rel="nofollow" data-method="delete"
+                        href="https://gla.edu.kg/features/296144/destroy_image_unsplash">
+                        <span class="sr-only">Delete Image</span>
+                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                          aria-hidden="true">
+                          <path fill-rule="evenodd"
+                            d="M16.5 4.478v.227a48.816 48.816 0 013.878.512.75.75 0 11-.256 1.478l-.209-.035-1.005 13.07a3 3 0 01-2.991 2.77H8.084a3 3 0 01-2.991-2.77L4.087 6.66l-.209.035a.75.75 0 01-.256-1.478A48.567 48.567 0 017.5 4.705v-.227c0-1.564 1.213-2.9 2.816-2.951a52.662 52.662 0 013.369 0c1.603.051 2.815 1.387 2.815 2.951zm-6.136-1.452a51.196 51.196 0 013.273 0C14.39 3.05 15 3.684 15 4.478v.113a49.488 49.488 0 00-6 0v-.113c0-.794.609-1.428 1.364-1.452zm-.355 5.945a.75.75 0 10-1.5.058l.347 9a.75.75 0 101.499-.058l-.346-9zm5.48.058a.75.75 0 10-1.498-.058l-.347 9a.75.75 0 001.5.058l.345-9z"
+                            clip-rule="evenodd"></path>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <img loading="lazy" src="./img/photo-1604881990409-b9f246db39da.jpg" alt="Career Support"
+                    class="w-full max-w-2xl object-cover rounded-xl">
+                </div>
+              </div>
+              <div x-on:click="toggle(&#39;features&#39;)">
+                <h3 class="text-2xl md:text-4xl sm:mb-4 font-semibold">
+                  Career Support
+                </h3>
+                <p class="sm:leading-relaxed mt-2 sm:mt-4 opacity-70 max-w-2xl">Receive guidance and support in building
+                  a successful career in the field of AI technology.</p>
+              </div>
+            </div>
+            <div
+              class="rounded-xl text-center lg:text-left items-center flex flex-col lg:flex-row gap-4 md:gap-12 lg:gap-20">
+              <div class="flex relative justify-center lg:order-last">
+                <div class="group">
+                  <div class="flex justify-between absolute w-full top-1 px-1">
+                    <div
+                      class="inline-flex opacity-0 group-hover:opacity-100 group-hover:origin-left group-hover:scale-100 scale-0 transition gap-3 items-center pl-3 pr-1 py-1 bg-black/60 text-base ring-1 ring-slate-300/10 backdrop-blur-lg rounded-lg text-white">
+                      <span class="text-sm">Change</span>
+                      <div class="flex gap-1">
+                        <a class="bg-teal-50 text-teal-600 hover:text-teal-700 hover:bg-teal-100 p-1.5 rounded-md transition"
+                          href="https://gla.edu.kg/features/296145/update_image">
+                          <span class="sr-only">Image from Unsplash</span>
+                          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M15 3H9V8H15V3ZM8 11H3V21H8H16H21V11H16V16H8V11Z" fill="currentColor"></path>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                    <div>
+                      <a class="bg-black/50 opacity-0 group-hover:opacity-100 group-hover:origin-right group-hover:scale-100 scale-0 transition  inline-flex items-center justify-center text-white backdrop-blur-lg p-1.5 hover:bg-rose-500 rounded-md"
+                        rel="nofollow" data-method="delete"
+                        href="https://gla.edu.kg/features/296145/destroy_image_unsplash">
+                        <span class="sr-only">Delete Image</span>
+                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                          aria-hidden="true">
+                          <path fill-rule="evenodd"
+                            d="M16.5 4.478v.227a48.816 48.816 0 013.878.512.75.75 0 11-.256 1.478l-.209-.035-1.005 13.07a3 3 0 01-2.991 2.77H8.084a3 3 0 01-2.991-2.77L4.087 6.66l-.209.035a.75.75 0 01-.256-1.478A48.567 48.567 0 017.5 4.705v-.227c0-1.564 1.213-2.9 2.816-2.951a52.662 52.662 0 013.369 0c1.603.051 2.815 1.387 2.815 2.951zm-6.136-1.452a51.196 51.196 0 013.273 0C14.39 3.05 15 3.684 15 4.478v.113a49.488 49.488 0 00-6 0v-.113c0-.794.609-1.428 1.364-1.452zm-.355 5.945a.75.75 0 10-1.5.058l.347 9a.75.75 0 101.499-.058l-.346-9zm5.48.058a.75.75 0 10-1.498-.058l-.347 9a.75.75 0 001.5.058l.345-9z"
+                            clip-rule="evenodd"></path>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <img loading="lazy" src="./img/photo-1461088945293-0c17689e48ac.jpg" alt="Community"
+                    class="w-full max-w-2xl object-cover rounded-xl">
+                </div>
+              </div>
+              <div x-on:click="toggle(&#39;features&#39;)">
+                <h3 class="text-2xl md:text-4xl sm:mb-4 font-semibold">
+                  Community
+                </h3>
+                <p class="sm:leading-relaxed mt-2 sm:mt-4 opacity-70 max-w-2xl">Join a vibrant community of AI
+                  enthusiasts and professionals to network and collaborate.</p>
+              </div>
+            </div>
+          </div>
+          <div class="grid md:grid-cols-2  lg:grid-cols-2  gap-12 sm:gap-16 mb-20">
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="stripes bg-slate-50 py-10 sm:mb-24">
+      <p class="opacity-50 text-center">This is shown only in edit mode</p>
+      <img srcset="./img/assets/pricing@2x-cdf97e04671c3e5eafb4aaffb6cdbf5486fec1c2a2d9a7865cf9e871c5c95b36.png 2x"
+        alt="Pricing" class="mx-auto mb-4 mt-8"
+        src="./img/assets/pricing-855a77ab0ccb86faa7260548fea140dcb743c57b597ec3d218f7e0af0fb763fb.png">
+      <p class="text-3xl text-center my-4 font-semibold opacity-90">Pricing Section</p>
+      <p class="max-w-4xl mx-auto opacity-70 leading-relaxed text-center">Looking to sell digital goods without the
+        hassle? With just a few clicks, you can add up to 3 slots and convert your landing page into a store. Set a
+        price, describe your products in detail, and include a checkout link to popular digital stores like
+        LemonSqueezy, Gumroad, Stripe, and more.</p>
+      <div
+        class="text-center bg-amber-100 hover:bg-amber-50 hover:ring-amber-100 text-amber-700 cursor-pointer rounded-lg shadow shadow-slate-600/5 ring-1 ring-amber-200 px-6 py-2.5 w-fit mx-auto mt-8"
+        x-on:click="toggle(&#39;pricing&#39;)">
+        Add pricing section
+      </div>
+    </div>
+    <div x-on:click="toggle(&#39;pricing&#39;)">
+    </div>
+    <div x-on:click="toggle(&#39;faq&#39;)">
+      <section id="faq" class="pb-8 px-5 py-20 sm:py-32">
+        <div class="grid lg:grid-cols-3 gap-6 sm:gap-10 max-w-7xl mx-auto">
+          <div>
+            <h2 class="text-3xl sticky top-6 sm:text-5xl md:leading-tight sm:mb-4 font-bold">
+              Frequently Asked Questions
+            </h2>
+          </div>
+          <div class="lg:col-span-2 flex flex-col gap-8 mx-auto">
+            <div class="bg-slate-50 rounded-xl p-6 sm:p-10">
+              <h3 class="text-2xl sm:text-3xl sm:mb-2 font-semibold">Who can enroll in the courses?</h3>
+              <p class="sm:leading-relaxed mt-2 sm:mt-2 text-lg sm:text-xl">Our courses are open to anyone interested in
+                learning AI technology, regardless of their background or experience.</p>
+            </div>
+            <div class="bg-slate-50 rounded-xl p-6 sm:p-10">
+              <h3 class="text-2xl sm:text-3xl sm:mb-2 font-semibold">What is the duration of the courses?</h3>
+              <p class="sm:leading-relaxed mt-2 sm:mt-2 text-lg sm:text-xl">The duration of our courses varies depending
+                on the program. We offer both short-term and long-term courses.</p>
+            </div>
+            <div class="bg-slate-50 rounded-xl p-6 sm:p-10">
+              <h3 class="text-2xl sm:text-3xl sm:mb-2 font-semibold">Are there any prerequisites for the courses?</h3>
+              <p class="sm:leading-relaxed mt-2 sm:mt-2 text-lg sm:text-xl">Some of our advanced courses may have
+                prerequisites, but we also offer beginner-friendly courses for those new to AI technology.</p>
+            </div>
+            <div class="bg-slate-50 rounded-xl p-6 sm:p-10">
+              <h3 class="text-2xl sm:text-3xl sm:mb-2 font-semibold">Can I get a certificate upon completion?</h3>
+              <p class="sm:leading-relaxed mt-2 sm:mt-2 text-lg sm:text-xl">Yes, upon successful completion of our
+                courses, you will receive a certificate to showcase your skills and knowledge.</p>
+            </div>
+            <div class="bg-slate-50 rounded-xl p-6 sm:p-10">
+              <h3 class="text-2xl sm:text-3xl sm:mb-2 font-semibold">Is financial aid available?</h3>
+              <p class="sm:leading-relaxed mt-2 sm:mt-2 text-lg sm:text-xl">We offer financial aid options for eligible
+                students. Please contact our support team for more information.</p>
+            </div>
+            <div class="bg-slate-50 rounded-xl p-6 sm:p-10">
+              <h3 class="text-2xl sm:text-3xl sm:mb-2 font-semibold">How can I contact the support team?</h3>
+              <p class="sm:leading-relaxed mt-2 sm:mt-2 text-lg sm:text-xl">You can reach our support team by email or
+                through our online chat system. We are available to assist you 24/7.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="stripes bg-slate-50 py-10 mt-16">
+      <p class="opacity-50 text-center">This is shown only in edit mode</p>
+      <img srcset="./img/assets/social@2x-ebb2c588dc57b9dc670dcaacea9014dc1fbe74c129afee38d93e4c9586e29a94.png 2x"
+        alt="Pricing" class="mx-auto mb-4 mt-8"
+        src="./img/assets/social-f275aee48525890b40750fb69e99e070d47e2b94f08204bac72876cfb90cc75e.png">
+      <p class="text-3xl text-center my-4 font-semibold opacity-90">Social Links</p>
+      <p class="max-w-4xl mx-auto opacity-70 leading-relaxed text-center">Add links to your social accounts so your
+        customers and visitors can find you on all platforms</p>
+      <div
+        class="text-center bg-amber-100 hover:bg-amber-50 hover:ring-amber-100 text-amber-700 cursor-pointer rounded-lg shadow shadow-slate-600/5 ring-1 ring-amber-200 px-6 py-2.5 w-fit mx-auto mt-8"
+        x-on:click="toggle(&#39;sociallinks&#39;)">
+        Add social links
+      </div>
+    </div>
+    <div class="grow"></div>
+    <div class="w-full mx-auto mt-12 sm:mt-32" style="background: rgba(34, 197, 167, 0.08)">
+      <div x-on:click="toggle(&#39;cta&#39;)">
+        <section class="py-16 px-5 relative overflow-hidden sm:pt-32">
+          <div class="mx-auto items-center flex flex-col gap-2 sm:gap-4 max-w-4xl">
+            <h2 class="text-3xl sm:text-5xl md:leading-tight text-center font-bold">
+              AI Learning Group
+            </h2>
+            <div class="mb-16 mt-8 text-center">
+              <section class="relative">
+                <h2 class="mb-3 text-2xl sm:text-2xl font-custom font-bold max-w-4xl md:leading-tight">
+                  Get notified about updates.
+                </h2>
+                <div class="">
+                  <form class="flex flex-col sm:flex-row gap-y-2 sm:gap-y-2 max-w-2xl gap-x-2 items-center flex-wrap"
+                    action="https://gla.edu.kg/subscribe" accept-charset="UTF-8" method="post">
+                    <input type="hidden" name="authenticity_token"
+                      value="emagB7FajeCSF-jPB9GPPHksMMG6VkVBit3EpnOR1YYvoaR1iamGG3qLbgL5UskGeZGJT2SR4GbfIiFHricZgQ"
+                      autocomplete="off">
+                    <input type="hidden" name="iframe_id" id="iframe_id" value="gla"
+                      autocomplete="off">
+                    <label class="sr-only" for="email">Email address</label>
+                    <input autocomplete="email" required="required"
+                      class="flex-auto rounded-lg border-0 bg-white px-6 py-3.5 shadow-sm ring-1 ring-black/10 focus:ring-2 w-full focus:ring-black/10 text-slate-900 text-base sm:text-xl sm:leading-6"
+                      placeholder="Enter your email." type="email" name="email" id="email">
+                    <input type="submit" name="commit" value="Notify me."
+                      class="rounded-lg py-4 whitespace-nowrap px-6 sm:px-12 text-base font-bold sm:text-xl text-white shadow-sm hover:opacity-90 transition focus-visible:outline focus-visible:outline-2 w-full focus-visible:outline-offset-2 focus-visible:outline-white"
+                      style="background-color: #1a9949" data-disable-with="Notify me.">
+                  </form>
+                </div>
+              </section>
+            </div>
+          </div>
+        </section>
+      </div>
+      <footer class="max-w-6xl py-10 flex flex-col text-lg px-5 gap-3 sm:gap-8 mx-auto">
+        <div class="text-sm">
+          <div class="flex justify-center gap-4 py-2.5">
+          </div>
+          <div class="flex flex-col md:flex-row gap-4 justify-center">
+            <span class="opacity-40">
+              © 2023 AI Learning Group All Rights Reserved. All rights reserved.
+            </span>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <script defer="" src="./js/v8b253dfea2ab4077af8c6f58422dfbfd1689876627854.js"
+    integrity="sha512-bjgnUKX4azu3dLTVtie9u6TKqgx29RBwfj3QXYt5EKfWM/9hPSAI/4qcV5NACjwAo8UtTeWefx6Zq5PHcMm7Tg=="
+    data-cf-beacon="{&quot;rayId&quot;:&quot;7f1dc7c73d8b15bc&quot;,&quot;version&quot;:&quot;2023.7.0&quot;,&quot;r&quot;:1,&quot;token&quot;:&quot;423f65fb87514ebcb50a648a6d7e4c77&quot;,&quot;si&quot;:100}"
+    crossorigin="anonymous"></script>
+
+
+  <script src="chrome-extension://idnnbdplmphpflfnlkomgpfbpcgelopg/inpage.js" id="xverse-wallet-provider"></script>
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open">
+    <style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style>
+    <div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration"
+      data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}">
+    </div>
+  </template></grammarly-desktop-integration>
+
+</html>
