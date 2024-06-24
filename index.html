@@ -2,6 +2,11 @@
 <html lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet" />
+
     <style type="text/css">
       .turbo-progress-bar {
         position: fixed;
@@ -13,6 +18,26 @@
         z-index: 2147483647;
         transition: width 300ms ease-out, opacity 150ms 150ms ease-in;
         transform: translate3d(0, 0, 0);
+      }
+
+      .luckiest-guy-regular {
+        font-family: "Luckiest Guy", cursive;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      .font-shadow {
+        text-shadow: 1px -1px #fff, -1px 1px #999, -8px 8px 3px #808080;
+      }
+
+      .site-header-font {
+        font-size: 20vmin;
+        line-height: 1;
+        margin: 0;
+        letter-spacing: 5px;
+        /* color: #e6e6e6; */
+        /* text-align: center; */
+        text-align: left;
       }
     </style>
     <style data-rc-order="prependQueue" data-css-hash="1g5yja5" data-token-hash="vx5xn4">
@@ -2289,7 +2314,11 @@
           </div>
           <div class="flex flex-col max-w-7xl py-12 pt-32 mx-auto">
             <div x-on:click="toggle(&#39;hero&#39;)">
-              <h1 class="text-4xl sm:text-6xl lg:text-7xl max-w-5xl font-custom font-bold">AI Learning Group</h1>
+              <h1
+                class="text-4xl sm:text-6xl lg:text-7xl max-w-5xl font-custom font-bold site-header-font luckiest-guy-regular font-shadow"
+              >
+                AI Learning Group
+              </h1>
             </div>
             <div>
               <div x-on:click="toggle(&#39;hero&#39;)">
